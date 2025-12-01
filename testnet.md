@@ -60,15 +60,15 @@
 
 | Steps                                                                                                                    | DA   | SG Forge | DRW  | Virtu |
 | :----------------------------------------------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
-| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | 📌        | -    | -     |
-| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | 📌        | 📌    | 📌     |
+| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | ✅        | -    | -     |
+| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | 📌        | -    | -     |
 | [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | 📌        | 📌    | 📌     |
 
 ### Step 3: Issuing tokens
 
 | Steps                                                                                      | DA   | SG Forge | DRW  | Virtu |
 | :----------------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting) | -    | -        | 📌    | -     |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting) | -    | 📌        | -    | -     |
 | [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued) | -    | 📌        | -    | -     |
 | [3.3 Issuer offers token transfer to DRW](#33-issuer-offers-token-transfer-to-drw)         | -    | 📌        | -    | -     |
 | [3.4 DRW accepts transfer](#34-drw-accepts-transfer)                                       | -    | -        | 📌    | -     |
@@ -160,6 +160,22 @@ Registrar creates Instrument Configuration:
 | Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Property                    | `isHolderOf`                                                                    |
 | Value                       | `USDCV`                                                                         |
+
+| Item                        | Value                                                                           |
+| :-------------------------- | :------------------------------------------------------------------------------ |
+| Instrument ID               | `EURCV-TESTNET`                                                                 |
+| Identifiers                 |                                                                                 |
+| Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Id                          | `EURCV`                                                                         |
+| Scheme                      | DTI                                                                             |
+| Requirement for Mint Issuer |                                                                                 |
+| Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property                    | `isIssuerOf`                                                                    |
+| Value                       | `EURCV`                                                                         |
+| Requirement for Holders     |                                                                                 |
+| Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property                    | `isHolderOf`                                                                    |
+| Value                       | `EURCV`                                                                         |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-specifying-the-requirement-of-the-bond-token) for details.
 
