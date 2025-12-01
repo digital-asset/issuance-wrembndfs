@@ -9,6 +9,7 @@
   - [Step 1: Onboarding roles](#step-1-onboarding-roles)
   - [Step 2: Configuring tokens](#step-2-configuring-tokens)
   - [Step 3: Issuing tokens](#step-3-issuing-tokens)
+  - [Step 4: Transfering tokens](#step-4-transfering-tokens)
 - [Detailed instructions](#detailed-instructions)
   - [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities)
   - [1.2 Registrar credential](#12-registrar-credential)
@@ -19,8 +20,8 @@
   - [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)
   - [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1)
   - [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)
-  - [3.5 Investor1 offers token transfer to Investor2](#35-investor1-offers-token-transfer-to-investor2)
-  - [3.6 Investor2 accepts transfer](#36-investor2-accepts-transfer)
+  - [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2)
+  - [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)
 
 ## Documentation
 
@@ -67,8 +68,15 @@
 | :--------------------------------------------------------------------------------------------- | :--- | :--------------- | :-------- | :-------- |
 | [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -                | ✅         | -         |
 | [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | ✅                | -         | -         |
-| [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors) | -    | ✅                | -         | -         |
-| [3.4 Investor accepts transfer](#34-investor-accepts-transfer)                                 | -    | -                | ✅         | -         |
+| [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | ✅                | -         | -         |
+| [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)                               | -    | -                | ✅         | -         |
+
+### Step 4: Transfering tokens
+
+| Steps                                                                                                | DA   | Registrar/Issuer | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------------- | :--- | :--------------- | :-------- | :-------- |
+| [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2) | -    | -                | ✅         | -         |
+| [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)                                     | -    | -                | -         | ✅         |
 
 ## Detailed instructions
 
@@ -250,7 +258,7 @@ Investor1 accepts transfer offer. (click on offer, and then on `Accept`)
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#investor1-accepts-the-transfer-offer-and-tokens-are-transferred) for details.
 
-### 3.5 Investor1 offers token transfer to Investor2
+### 4.1 Investor1 offers token transfer to Investor2
 
 | Actors           | Module   | Tab      |
 | :--------------- | :------- | :------- |
@@ -264,11 +272,11 @@ Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding /
 | Send to    | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
 | Amount     | `8000000`                                                                                                  |
-| Reference  | `DEMO-STABLECOIN-TESTNET $3m tranfer to Investor2`                                                       |
+| Reference  | `DEMO-STABLECOIN-TESTNET $3m tranfer to Investor2`                                                         |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
-### 3.6 Investor2 accepts transfer
+### 4.2 Investor2 accepts transfer
 
 | Actors    | Module   | Tab       |
 | :-------- | :------- | :-------- |
