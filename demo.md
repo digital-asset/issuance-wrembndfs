@@ -57,7 +57,7 @@
 | Steps                                                                                                                                                                                           | DA   | Registrar / Issuer | Investor1 | Investor2 |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :----------------- | :-------- | :-------- |
 | [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | ✅                  | -         | -         |
-| [2.2 Registrar offers credentials to Issuer and Holders](#22-registrar-offers-credentials-to-issuer-and-holders)                                                                                | -    | 📌                  | 📌         | 📌         |
+| [2.2 Registrar offers credentials to Issuer and Holders](#22-registrar-offers-credentials-to-issuer-and-holders)                                                                                | -    | ✅                  | ✅         | ✅         |
 
 ### Step 3: Issuing tokens
 
@@ -153,7 +153,7 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Registrar issues free credentials (Credentials tab), and Issuer, Investor1, and Investor2 accept them (Offers tab).
 
-Credential to Issue DEMO-STABLECOIN:
+Credential to issue DEMO-STABLECOIN:
 
 | Item        | Value                                                                                                      |
 | :---------- | :--------------------------------------------------------------------------------------------------------- |
