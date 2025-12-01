@@ -222,9 +222,9 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 3.3 Issuer offers token transfer to Investors
 
-| Actors    | Module   | Tab      |
-| :-------- | :------- | :------- |
-| Investor1 | Registry | Holdings |
+| Actors           | Module   | Tab      |
+| :--------------- | :------- | :------- |
+| Registrar/Issuer | Registry | Holdings |
 
 Issuer transfers tokens to Investor1
 
