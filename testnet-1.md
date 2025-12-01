@@ -16,10 +16,20 @@
   - [1.3 Registrar onboarding](#13-registrar-onboarding)
   - [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule)
   - [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)
+    - [EURCV Instrument Configuration](#eurcv-instrument-configuration)
+    - [USDCV Instrument Configuration](#usdcv-instrument-configuration)
   - [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)
+    - [Credential to issue EURCV](#credential-to-issue-eurcv)
+    - [Credentials to hold EURCV](#credentials-to-hold-eurcv)
+    - [Credential to issue USDCV](#credential-to-issue-usdcv)
+    - [Credentials to hold USDCV](#credentials-to-hold-usdcv)
   - [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)
+    - [EUR10m EURCV issued](#eur10m-eurcv-issued)
+    - [USD10m USDCV issued](#usd10m-usdcv-issued)
   - [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)
   - [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1)
+    - [EUR8m EURCV placed to Investor1](#eur8m-eurcv-placed-to-investor1)
+    - [USD8m USDCV placed to Investor1](#usd8m-usdcv-placed-to-investor1)
   - [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)
   - [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2)
   - [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)
@@ -145,6 +155,8 @@ Both boxes should turn from blue to grey.
 
 Registrar creates Instrument Configuration:
 
+#### EURCV Instrument Configuration
+
 | Item                        | Value                                                                           |
 | :-------------------------- | :------------------------------------------------------------------------------ |
 | Instrument ID               | `EURCV-TESTNET`                                                                 |
@@ -163,6 +175,8 @@ Registrar creates Instrument Configuration:
 | Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Property                    | `isHolderOf`                                                                    |
 | Value                       | `EURCV`                                                                         |
+
+#### USDCV Instrument Configuration
 
 | Item                        | Value                                                                           |
 | :-------------------------- | :------------------------------------------------------------------------------ |
@@ -193,7 +207,7 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Registrar issues free credentials (Credentials tab), and Issuer, Investor1, and Investor2 accept them (Offers tab).
 
-Credential to issue EURCV:
+#### Credential to issue EURCV
 
 | Item        | Value                                                                           |
 | :---------- | :------------------------------------------------------------------------------ |
@@ -204,7 +218,7 @@ Credential to issue EURCV:
 | Property    | `isIssuerOf`                                                                    |
 | Value       | `EURCV`                                                                         |
 
-Credentials to hold EURCV:
+#### Credentials to hold EURCV
 
 | Item        | Value                                                                           |
 | :---------- | :------------------------------------------------------------------------------ |
@@ -233,7 +247,7 @@ Credentials to hold EURCV:
 | Property    | `isHolderOf`                                                                                               |
 | Value       | `EURCV`                                                                                                    |
 
-Credential to issue USDCV:
+#### Credential to issue USDCV
 
 | Item        | Value                                                                           |
 | :---------- | :------------------------------------------------------------------------------ |
@@ -244,7 +258,7 @@ Credential to issue USDCV:
 | Property    | `isIssuerOf`                                                                    |
 | Value       | `USDCV`                                                                         |
 
-Credentials to hold USDCV:
+#### Credentials to hold USDCV
 
 | Item        | Value                                                                           |
 | :---------- | :------------------------------------------------------------------------------ |
@@ -281,12 +295,16 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 | :------- | :------- | :---- |
 | SG Forge | Registry | Mints |
 
+#### EUR10m EURCV issued
+
 | Item       | Value                                                                           |
 | :--------- | :------------------------------------------------------------------------------ |
 | Instrument | `EURCV-TESTNET`                                                                 |
 | Amount     | `10000000`                                                                      |
 | Registrar  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Reference  | `EURCV-TESTNET EUR10m issued Nov-2025`                                          |
+
+#### USD10m USDCV issued
 
 | Item       | Value                                                                           |
 | :--------- | :------------------------------------------------------------------------------ |
@@ -315,6 +333,8 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding / `Transfer` )
 
+#### EUR8m EURCV placed to Investor1
+
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
 | Send from  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                            |
@@ -322,6 +342,8 @@ Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding /
 | Instrument | `EURCV-TESTNET`                                                                                            |
 | Amount     | `8000000`                                                                                                  |
 | Reference  | `EURCV-TESTNET EUR8m placement to Investor1`                                                               |
+
+#### USD8m USDCV placed to Investor1
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
