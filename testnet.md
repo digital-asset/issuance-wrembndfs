@@ -147,26 +147,13 @@ Registrar creates Instrument Configuration:
 
 | Item                        | Value                                                                           |
 | :-------------------------- | :------------------------------------------------------------------------------ |
-| Instrument ID               | `USDCV-TESTNET`                                                                 |
-| Identifiers                 |                                                                                 |
-| Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Id                          | `USDCV`                                                                         |
-| Scheme                      | DTI                                                                             |
-| Requirement for Mint Issuer |                                                                                 |
-| Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Property                    | `isIssuerOf`                                                                    |
-| Value                       | `USDCV`                                                                         |
-| Requirement for Holders     |                                                                                 |
-| Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Property                    | `isHolderOf`                                                                    |
-| Value                       | `USDCV`                                                                         |
-
-| Item                        | Value                                                                           |
-| :-------------------------- | :------------------------------------------------------------------------------ |
 | Instrument ID               | `EURCV-TESTNET`                                                                 |
 | Identifiers                 |                                                                                 |
 | Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Id                          | `EURCV`                                                                         |
+| Id                          | `XT9W5C49FJV7`                                                                         |
+| Scheme                      | ISIN                                                                             |
+| Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Id                          | `9W5C49FJV`                                                                         |
 | Scheme                      | DTI                                                                             |
 | Requirement for Mint Issuer |                                                                                 |
 | Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
@@ -176,6 +163,25 @@ Registrar creates Instrument Configuration:
 | Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Property                    | `isHolderOf`                                                                    |
 | Value                       | `EURCV`                                                                         |
+
+| Item                        | Value                                                                           |
+| :-------------------------- | :------------------------------------------------------------------------------ |
+| Instrument ID               | `USDCV-TESTNET`                                                                 |
+| Identifiers                 |                                                                                 |
+| Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Id                          | `XTLD6JM2JN25`                                                                         |
+| Scheme                      | ISIN                                                                             |
+| Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Id                          | `LD6JM2JN2`                                                                         |
+| Scheme                      | DTI                                                                             |
+| Requirement for Mint Issuer |                                                                                 |
+| Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property                    | `isIssuerOf`                                                                    |
+| Value                       | `USDCV`                                                                         |
+| Requirement for Holders     |                                                                                 |
+| Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property                    | `isHolderOf`                                                                    |
+| Value                       | `USDCV`                                                                         |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-specifying-the-requirement-of-the-bond-token) for details.
 
