@@ -12,7 +12,7 @@
 - [Detailed instructions](#detailed-instructions)
   - [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities)
   - [1.2 Registrar credential](#12-registrar-credential)
-  - [1.10 / 1.11 Registrar onboarding](#110--111-registrar-onboarding)
+  - [1.3 Registrar onboarding](#13-registrar-onboarding)
   - [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration)
   - [2.2 / 2.3 / 2.4 / 2.5 Registrar offers credential to Issuer and Holders](#22--23--24--25-registrar-offers-credential-to-issuer-and-holders)
   - [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)
@@ -46,30 +46,30 @@
 
 ### Step 1: Onboarding roles
 
-| Steps                                                                                                            | DA   | BR      | Registrar  | SGPM | DRWS |
-| :--------------------------------------------------------------------------------------------------------------- | :--- | :------ | :--- | :--- | :--- |
-| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities)                     | -    | ✅       | ✅    | ✅    | ✅    |
-| [1.2 Provider credential](#12-provider-credential)                                                               | ✅    | ✅ by DA | -    | -    | -    |
-| [1.3 Onboard Provider](#13-onboard-provider)                                                                     | -    | ✅ by DA | -    | -    | -    |
-| [1.4 Onboarding requirements for registrars and holders](#14-onboarding-requirements-for-registrars-and-holders) | -    | ✅ by DA | -    | -    | -    |
-| [1.5 / 1.6 Registrar credential](#15--16-registrar-credential)                                                   | -    | ✅ by DA | ✅    | -    | -    |
-| [1.10 / 1.11 Registrar onboarding](#110--111-registrar-onboarding)                                               | -    | ✅       | ✅    | -    | -    |
+| Steps                                                                                                            | DA   | BR      | Registrar | SGPM | DRWS |
+| :--------------------------------------------------------------------------------------------------------------- | :--- | :------ | :-------- | :--- | :--- |
+| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities)                     | -    | ✅       | ✅         | ✅    | ✅    |
+| [1.2 Provider credential](#12-provider-credential)                                                               | ✅    | ✅ by DA | -         | -    | -    |
+| [1.3 Onboard Provider](#13-onboard-provider)                                                                     | -    | ✅ by DA | -         | -    | -    |
+| [1.4 Onboarding requirements for registrars and holders](#14-onboarding-requirements-for-registrars-and-holders) | -    | ✅ by DA | -         | -    | -    |
+| [1.5 / 1.6 Registrar credential](#15--16-registrar-credential)                                                   | -    | ✅ by DA | ✅         | -    | -    |
+| [1.10 / 1.11 Registrar onboarding](#110--111-registrar-onboarding)                                               | -    | ✅       | ✅         | -    | -    |
 
 ### Step 2: Configuring tokens
 
-| Steps                                                                                                                                                                                           | DA   | BR   | Registrar  | SGPM | DRWS |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :--- | :--- | :--- | :--- |
-| [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | -    | ✅    | -    | -    |
-| [2.2 / 2.3 / 2.4 / 2.5 Registrar offers credential to Issuer and Holders](#22--23--24--25-registrar-offers-credential-to-issuer-and-holders)                                                    | -    | -    | ✅    | ✅    | ✅    |
+| Steps                                                                                                                                                                                           | DA   | BR   | Registrar | SGPM | DRWS |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :--- | :-------- | :--- | :--- |
+| [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | -    | ✅         | -    | -    |
+| [2.2 / 2.3 / 2.4 / 2.5 Registrar offers credential to Issuer and Holders](#22--23--24--25-registrar-offers-credential-to-issuer-and-holders)                                                    | -    | -    | ✅         | ✅    | ✅    |
 
 ### Step 3: Issuing tokens
 
-| Steps                                                                                          | DA   | BR   | Registrar  | SGPM | DRWS |
-| :--------------------------------------------------------------------------------------------- | :--- | :--- | :--- | :--- | :--- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -    | -    | ✅    | -    |
-| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | -    | ✅    | -    | -    |
-| [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors) | -    | -    | -    | ✅    | -    |
-| [3.4 Investor accepts transfer](#34-investor-accepts-transfer)                                 | -    | -    | -    | -    | ✅    |
+| Steps                                                                                          | DA   | BR   | Registrar | SGPM | DRWS |
+| :--------------------------------------------------------------------------------------------- | :--- | :--- | :-------- | :--- | :--- |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -    | -         | ✅    | -    |
+| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | -    | ✅         | -    | -    |
+| [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors) | -    | -    | -         | ✅    | -    |
+| [3.4 Investor accepts transfer](#34-investor-accepts-transfer)                                 | -    | -    | -         | -    | ✅    |
 
 ## Detailed instructions
 
@@ -91,36 +91,36 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 DA offers Registrar credential (Credentials tab), and Registrar accepts it (Offers tab):
 
-| Item        | Value                                                                           |
-| :---------- | :------------------------------------------------------------------------------ |
+| Item        | Value                                                                                                      |
+| :---------- | :--------------------------------------------------------------------------------------------------------- |
 | holder      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| id          | `Registrar demo simonletort.da`                                                            |
-| description | `Registrar demo simonletort.da`                                                            |
+| id          | `Registrar demo simonletort.da`                                                                            |
+| description | `Registrar demo simonletort.da`                                                                            |
 | Subject     | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Property    | `hasRegistryRole`                                                               |
-| Value       | `Registrar`                                                                     |
+| Property    | `hasRegistryRole`                                                                                          |
+| Value       | `Registrar`                                                                                                |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#provider-offers-registrar-credential)for details.
 
-### 1.10 / 1.11 Registrar onboarding
+### 1.3 Registrar onboarding
 
-| Actors  | Module   | Tab        |
-| :------ | :------- | :--------- |
+| Actors        | Module   | Tab        |
+| :------------ | :------- | :--------- |
 | Registrar, DA | Registry | Onboarding |
 
 Registrar clicks on `Request Registrar Service`, and DA accepts.
 
-| Item     | Value                                                                                       |
-| :------- | :------------------------------------------------------------------------------------------ |
-| Provider | `broadridge-provider::1220992258bad53ba6cb1aa634bb912d457f3e0382892ced2d00b4cac654e6e52259` |
+| Item     | Value                                                                                                |
+| :------- | :--------------------------------------------------------------------------------------------------- |
+| Provider | `DigitalAsset-UtilityOperator::12202679f2bbe57d8cba9ef3cee847ac8239df0877105ab1f01a77d47477fdce1204` |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#registrar-requests-onboarding-as-a-registrar-in-the-registry) for details.
 
 ### 2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration
 
-| Actors | Module   | Tab           |
-| :----- | :------- | :------------ |
-| Registrar    | Registry | Configuration |
+| Actors    | Module   | Tab           |
+| :-------- | :------- | :------------ |
+| Registrar | Registry | Configuration |
 
 Registrar clicks on `Create Allocation Factory` and `Create Transfer Rule`.
 
@@ -130,28 +130,28 @@ Both boxes should turn from blue to grey.
 
 Registrar creates Instrument Configuration:
 
-| Item                        | Value                                                                           |
-| :-------------------------- | :------------------------------------------------------------------------------ |
-| Instrument ID               | `SGNOTES-[CUSIP]-TESTNET`                                                       |
-| Identifiers                 |                                                                                 |
+| Item                        | Value                                                                                                      |
+| :-------------------------- | :--------------------------------------------------------------------------------------------------------- |
+| Instrument ID               | `SGNOTES-[CUSIP]-TESTNET`                                                                                  |
+| Identifiers                 |                                                                                                            |
 | Source                      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Id                          | `[CUSIP]`                                                                       |
-| Scheme                      | CUSIP                                                                           |
-| Requirement for Mint Issuer |                                                                                 |
+| Id                          | `[CUSIP]`                                                                                                  |
+| Scheme                      | CUSIP                                                                                                      |
+| Requirement for Mint Issuer |                                                                                                            |
 | Credential Issuer           | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Property                    | `isIssuerOf`                                                                    |
-| Value                       | `SGNOTES`                                                                       |
-| Requirement for Holders     |                                                                                 |
+| Property                    | `isIssuerOf`                                                                                               |
+| Value                       | `SGNOTES`                                                                                                  |
+| Requirement for Holders     |                                                                                                            |
 | Credential Issuer           | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Property                    | `isHolderOf`                                                                    |
-| Value                       | `SGNOTES`                                                                       |
+| Property                    | `isHolderOf`                                                                                               |
+| Value                       | `SGNOTES`                                                                                                  |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-specifying-the-requirement-of-the-bond-token) for details.
 
 ### 2.2 / 2.3 / 2.4 / 2.5 Registrar offers credential to Issuer and Holders
 
-| Actors          | Module     | Tab                 |
-| :-------------- | :--------- | :------------------ |
+| Actors                | Module     | Tab                 |
+| :-------------------- | :--------- | :------------------ |
 | Registrar, SGPM, DRWS | Credential | Credentials, Offers |
 
 Registrar issues free credentials (Credentials tab), and SGPM / DRWS accept them (Offers tab).
@@ -197,20 +197,20 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 | :----- | :------- | :---- |
 | SGPM   | Registry | Mints |
 
-| Item       | Value                                                                           |
-| :--------- | :------------------------------------------------------------------------------ |
-| Instrument | `SGNOTES-[CUSIP]-TESTNET`                                                       |
-| Amount     | `1000000`                                                                       |
+| Item       | Value                                                                                                      |
+| :--------- | :--------------------------------------------------------------------------------------------------------- |
+| Instrument | `SGNOTES-[CUSIP]-TESTNET`                                                                                  |
+| Amount     | `1000000`                                                                                                  |
 | Registrar  | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Reference  | `SGNOTES-[CUSIP]-TESTNET $1m issued Oct-2025`                                   |
+| Reference  | `SGNOTES-[CUSIP]-TESTNET $1m issued Oct-2025`                                                              |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-requests-token-issuance-minting) for details.
 
 ### 3.2 Registrar accepts and tokens are issued
 
-| Actors | Module   | Tab   |
-| :----- | :------- | :---- |
-| Registrar    | Registry | Mints |
+| Actors    | Module   | Tab   |
+| :-------- | :------- | :---- |
+| Registrar | Registry | Mints |
 
 Registrar accepts and tokens are issued.
 
@@ -224,13 +224,13 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 SGPM transfers tokens to DRWS
 
-| Item       | Value                                                                                     |
-| :--------- | :---------------------------------------------------------------------------------------- |
-| Receiver   | `Cumberland-DRWS-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94` |
-| Instrument | `SGNOTES-[CUSIP]-TESTNET`                                                                 |
-| Amount     | `1000000`                                                                                 |
-| Registar   | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca`           |
-| Reference  | `SGNOTES-[CUSIP]-TESTNET $1m placement to DRWS`                                           |
+| Item       | Value                                                                                                      |
+| :--------- | :--------------------------------------------------------------------------------------------------------- |
+| Receiver   | `Cumberland-DRWS-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94`                  |
+| Instrument | `SGNOTES-[CUSIP]-TESTNET`                                                                                  |
+| Amount     | `1000000`                                                                                                  |
+| Registar   | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Reference  | `SGNOTES-[CUSIP]-TESTNET $1m placement to DRWS`                                                            |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
