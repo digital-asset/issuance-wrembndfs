@@ -215,23 +215,23 @@ Credentials to hold EURCV:
 | Property    | `isHolderOf`                                                                    |
 | Value       | `EURCV`                                                                         |
 
-| Item        | Value                                |
-| :---------- | :----------------------------------- |
-| holder      | `[Investor1_Entity::Investor1_Node]` |
-| id          | `Investor1-EURCV-Holder`             |
-| description | `Investor1-EURCV-Holder`             |
-| Subject     | `[Investor1_Entity::Investor1_Node]` |
-| Property    | `isHolderOf`                         |
-| Value       | `EURCV`                              |
+| Item        | Value                                                                                                      |
+| :---------- | :--------------------------------------------------------------------------------------------------------- |
+| holder      | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| id          | `Investor1-EURCV-Holder`                                                                                   |
+| description | `Investor1-EURCV-Holder`                                                                                   |
+| Subject     | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Property    | `isHolderOf`                                                                                               |
+| Value       | `EURCV`                                                                                                    |
 
-| Item        | Value                                |
-| :---------- | :----------------------------------- |
-| holder      | `[Investor2_Entity::Investor2_Node]` |
-| id          | `Investor2-EURCV-Holder`             |
-| description | `Investor2-EURCV-Holder`             |
-| Subject     | `[Investor2_Entity::Investor2_Node]` |
-| Property    | `isHolderOf`                         |
-| Value       | `EURCV`                              |
+| Item        | Value                                                                                                      |
+| :---------- | :--------------------------------------------------------------------------------------------------------- |
+| holder      | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| id          | `Investor2-EURCV-Holder`                                                                                   |
+| description | `Investor2-EURCV-Holder`                                                                                   |
+| Subject     | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Property    | `isHolderOf`                                                                                               |
+| Value       | `EURCV`                                                                                                    |
 
 Credential to issue USDCV:
 
@@ -255,23 +255,23 @@ Credentials to hold USDCV:
 | Property    | `isHolderOf`                                                                    |
 | Value       | `USDCV`                                                                         |
 
-| Item        | Value                                |
-| :---------- | :----------------------------------- |
-| holder      | `[Investor1_Entity::Investor1_Node]` |
-| id          | `Investor1-USDCV-Holder`             |
-| description | `Investor1-USDCV-Holder`             |
-| Subject     | `[Investor1_Entity::Investor1_Node]` |
-| Property    | `isHolderOf`                         |
-| Value       | `USDCV`                              |
+| Item        | Value                                                                                                      |
+| :---------- | :--------------------------------------------------------------------------------------------------------- |
+| holder      | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| id          | `Investor1-USDCV-Holder`                                                                                   |
+| description | `Investor1-USDCV-Holder`                                                                                   |
+| Subject     | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Property    | `isHolderOf`                                                                                               |
+| Value       | `USDCV`                                                                                                    |
 
-| Item        | Value                                |
-| :---------- | :----------------------------------- |
-| holder      | `[Investor2_Entity::Investor2_Node]` |
-| id          | `Investor2-USDCV-Holder`             |
-| description | `Investor2-USDCV-Holder`             |
-| Subject     | `[Investor2_Entity::Investor2_Node]` |
-| Property    | `isHolderOf`                         |
-| Value       | `USDCV`                              |
+| Item        | Value                                                                                                      |
+| :---------- | :--------------------------------------------------------------------------------------------------------- |
+| holder      | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| id          | `Investor2-USDCV-Holder`                                                                                   |
+| description | `Investor2-USDCV-Holder`                                                                                   |
+| Subject     | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Property    | `isHolderOf`                                                                                               |
+| Value       | `USDCV`                                                                                                    |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-offers-credential-of-token-issuer-and-holder-to-issuer) for details.
 
@@ -283,10 +283,17 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 | Item       | Value                                                                           |
 | :--------- | :------------------------------------------------------------------------------ |
+| Instrument | `EURCV-TESTNET`                                                                 |
+| Amount     | `10000000`                                                                      |
+| Registrar  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Reference  | `EURCV-TESTNET EUR10m issued Nov-2025`                                          |
+
+| Item       | Value                                                                           |
+| :--------- | :------------------------------------------------------------------------------ |
 | Instrument | `USDCV-TESTNET`                                                                 |
 | Amount     | `10000000`                                                                      |
 | Registrar  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Reference  | `USDCV-TESTNET $10m issued Nov-2025`                                            |
+| Reference  | `USDCV-TESTNET USD10m issued Nov-2025`                                          |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-requests-token-issuance-minting) for details.
 
@@ -308,13 +315,21 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding / `Transfer` )
 
-| Item       | Value                                                                           |
-| :--------- | :------------------------------------------------------------------------------ |
-| Send from  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Send to    | `[Investor1_Entity::Investor1_Node]`                                            |
-| Instrument | `USDCV-TESTNET`                                                                 |
-| Amount     | `8000000`                                                                       |
-| Reference  | `USDCV-TESTNET $8m placement to Investor1`                                      |
+| Item       | Value                                                                                                      |
+| :--------- | :--------------------------------------------------------------------------------------------------------- |
+| Send from  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                            |
+| Send to    | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Instrument | `EURCV-TESTNET`                                                                                            |
+| Amount     | `8000000`                                                                                                  |
+| Reference  | `EURCV-TESTNET EUR8m placement to Investor1`                                                               |
+
+| Item       | Value                                                                                                      |
+| :--------- | :--------------------------------------------------------------------------------------------------------- |
+| Send from  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                            |
+| Send to    | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Instrument | `USDCV-TESTNET`                                                                                            |
+| Amount     | `8000000`                                                                                                  |
+| Reference  | `USDCV-TESTNET USD8m placement to Investor1`                                                               |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
@@ -336,13 +351,21 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Investor1 transfers tokens to Investor2. (3 dots menu on the right of the holding / `Transfer` )
 
-| Item       | Value                                                    |
-| :--------- | :------------------------------------------------------- |
-| Send from  | `[Investor1_Entity::Investor1_Node]`                     |
-| Send to    | `[Investor2_Entity::Investor2_Node]`                     |
-| Instrument | `USDCV-TESTNET`                                          |
-| Amount     | `3000000`                                                |
-| Reference  | `USDCV-TESTNET $3m transfer from Investor1 to Investor2` |
+| Item       | Value                                                                                                      |
+| :--------- | :--------------------------------------------------------------------------------------------------------- |
+| Send from  | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Send to    | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Instrument | `EURCV-TESTNET`                                                                                            |
+| Amount     | `3000000`                                                                                                  |
+| Reference  | `EURCV-TESTNET EUR3m transfer from Investor1 to Investor2`                                                 |
+
+| Item       | Value                                                                                                      |
+| :--------- | :--------------------------------------------------------------------------------------------------------- |
+| Send from  | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Send to    | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Instrument | `USDCV-TESTNET`                                                                                            |
+| Amount     | `3000000`                                                                                                  |
+| Reference  | `USDCV-TESTNET USD3m transfer from Investor1 to Investor2`                                                 |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
