@@ -19,10 +19,10 @@
   - [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)
   - [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)
   - [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)
-  - [3.3 Issuer offers token transfer to DRW](#33-issuer-offers-token-transfer-to-drw)
-  - [3.4 DRW accepts transfer](#34-drw-accepts-transfer)
-  - [4.1 DRW offers token transfer to Virtu](#41-drw-offers-token-transfer-to-virtu)
-  - [4.2 Virtu accepts transfer](#42-virtu-accepts-transfer)
+  - [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1)
+  - [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)
+  - [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2)
+  - [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)
 
 ## Documentation
 
@@ -32,53 +32,53 @@
 
 ## URLs & Versions
 
-| Entity                      | Details | Utility UI version |
-| :-------------------------- | :------ | ------------------ |
-| SG Forge (Registrar/Issuer) | [TBC]   | [0.10.2 TBC]       |
-| DRW (Investor1)             | [TBC]   | [0.10.2 TBC]       |
-| Virtu (Investor2)           | [TBC]   | [0.10.2 TBC]       |
+| Entity                      | Details                                                                                 | Utility UI version |
+| :-------------------------- | :-------------------------------------------------------------------------------------- | ------------------ |
+| SG Forge (Registrar/Issuer) | https://utility-socgen.test.broadridge.catalyst.intellecteu.io                          | 0.9.3              |
+| Investor1                   | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
+| Investor2                   | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
 
 ## PartyIDs
 
-| Entity   | Party ID                                                                        |
-| :------- | :------------------------------------------------------------------------------ |
-| SG Forge | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| DRW      | `[DRW_Entity::DRW_Node]`                                                        |
-| Virtu    | `[Virtu_Entity::Virtu_Node]`                                                    |
+| Entity    | Party ID                                                                                                   |
+| :-------- | :--------------------------------------------------------------------------------------------------------- |
+| SG Forge  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                            |
+| Investor1 | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Investor2 | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 
 ## Status
 
 ### Step 1: Onboarding roles
 
-| Steps                                                                                        | DA   | SG Forge | DRW  | Virtu |
-| :------------------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
-| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅        | 📌    | 📌     |
-| [1.2 Registrar credential](#12-registrar-credential)                                         | ✅    | 📌        | -    | -     |
-| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | ✅    | ✅        | -    | -     |
+| Steps                                                                                        | DA   | SG Forge | Investor1 | Investor2 |
+| :------------------------------------------------------------------------------------------- | :--- | :------- | :-------- | :-------- |
+| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅        | 📌         | 📌         |
+| [1.2 Registrar credential](#12-registrar-credential)                                         | ✅    | 📌        | -         | -         |
+| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | ✅    | ✅        | -         | -         |
 
 ### Step 2: Configuring tokens
 
-| Steps                                                                                                                    | DA   | SG Forge | DRW  | Virtu |
-| :----------------------------------------------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
-| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | ✅        | -    | -     |
-| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | 📌        | -    | -     |
-| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | 📌        | 📌    | 📌     |
+| Steps                                                                                                                    | DA   | SG Forge | Investor1 | Investor2 |
+| :----------------------------------------------------------------------------------------------------------------------- | :--- | :------- | :-------- | :-------- |
+| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | ✅        | -         | -         |
+| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | 📌        | -         | -         |
+| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | 📌        | 📌         | 📌         |
 
 ### Step 3: Issuing tokens
 
-| Steps                                                                                      | DA   | SG Forge | DRW  | Virtu |
-| :----------------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting) | -    | 📌        | -    | -     |
-| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued) | -    | 📌        | -    | -     |
-| [3.3 Issuer offers token transfer to DRW](#33-issuer-offers-token-transfer-to-drw)         | -    | 📌        | -    | -     |
-| [3.4 DRW accepts transfer](#34-drw-accepts-transfer)                                       | -    | -        | 📌    | -     |
+| Steps                                                                                          | DA   | SG Forge | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------- | :--- | :------- | :-------- | :-------- |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | 📌        | -         | -         |
+| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | 📌        | -         | -         |
+| [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | 📌        | -         | -         |
+| [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)                               | -    | -        | 📌         | -         |
 
 ### Step 4: Transfering tokens
 
-| Steps                                                                            | DA   | SG Forge | DRW  | Virtu |
-| :------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
-| [4.1 DRW offers token transfer to Virtu](#41-drw-offers-token-transfer-to-virtu) | -    | -        | 📌    | -     |
-| [4.2 Virtu accepts transfer](#42-virtu-accepts-transfer)                         | -    | -        | -    | 📌     |
+| Steps                                                                                                | DA   | SG Forge | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------------- | :--- | :------- | :-------- | :-------- |
+| [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2) | -    | -        | 📌         | -         |
+| [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)                                     | -    | -        | -         | 📌         |
 
 ## Detailed instructions
 
@@ -150,10 +150,10 @@ Registrar creates Instrument Configuration:
 | Instrument ID               | `EURCV-TESTNET`                                                                 |
 | Identifiers                 |                                                                                 |
 | Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Id                          | `XT9W5C49FJV7`                                                                         |
-| Scheme                      | ISIN                                                                             |
+| Id                          | `XT9W5C49FJV7`                                                                  |
+| Scheme                      | ISIN                                                                            |
 | Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Id                          | `9W5C49FJV`                                                                         |
+| Id                          | `9W5C49FJV`                                                                     |
 | Scheme                      | DTI                                                                             |
 | Requirement for Mint Issuer |                                                                                 |
 | Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
@@ -169,10 +169,10 @@ Registrar creates Instrument Configuration:
 | Instrument ID               | `USDCV-TESTNET`                                                                 |
 | Identifiers                 |                                                                                 |
 | Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Id                          | `XTLD6JM2JN25`                                                                         |
-| Scheme                      | ISIN                                                                             |
+| Id                          | `XTLD6JM2JN25`                                                                  |
+| Scheme                      | ISIN                                                                            |
 | Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Id                          | `LD6JM2JN2`                                                                         |
+| Id                          | `LD6JM2JN2`                                                                     |
 | Scheme                      | DTI                                                                             |
 | Requirement for Mint Issuer |                                                                                 |
 | Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
@@ -187,11 +187,51 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 2.3 Registrar offers credentials to Issuer and Holders
 
-| Actors               | Module     | Tab                 |
-| :------------------- | :--------- | :------------------ |
-| SG Forge, DRW, Virtu | Credential | Credentials, Offers |
+| Actors                         | Module     | Tab                 |
+| :----------------------------- | :--------- | :------------------ |
+| SG Forge, Investor1, Investor2 | Credential | Credentials, Offers |
 
-Registrar issues free credentials (Credentials tab), and Issuer, DRW, and Virtu accept them (Offers tab).
+Registrar issues free credentials (Credentials tab), and Issuer, Investor1, and Investor2 accept them (Offers tab).
+
+Credential to issue EURCV:
+
+| Item        | Value                                                                           |
+| :---------- | :------------------------------------------------------------------------------ |
+| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| id          | `Issuer-EURCV-Issuer`                                                           |
+| description | `Issuer-EURCV-Issuer`                                                           |
+| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property    | `isIssuerOf`                                                                    |
+| Value       | `EURCV`                                                                         |
+
+Credentials to hold EURCV:
+
+| Item        | Value                                                                           |
+| :---------- | :------------------------------------------------------------------------------ |
+| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| id          | `Issuer-EURCV-Holder`                                                           |
+| description | `Issuer-EURCV-Holder`                                                           |
+| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property    | `isHolderOf`                                                                    |
+| Value       | `EURCV`                                                                         |
+
+| Item        | Value                                |
+| :---------- | :----------------------------------- |
+| holder      | `[Investor1_Entity::Investor1_Node]` |
+| id          | `Investor1-EURCV-Holder`             |
+| description | `Investor1-EURCV-Holder`             |
+| Subject     | `[Investor1_Entity::Investor1_Node]` |
+| Property    | `isHolderOf`                         |
+| Value       | `EURCV`                              |
+
+| Item        | Value                                |
+| :---------- | :----------------------------------- |
+| holder      | `[Investor2_Entity::Investor2_Node]` |
+| id          | `Investor2-EURCV-Holder`             |
+| description | `Investor2-EURCV-Holder`             |
+| Subject     | `[Investor2_Entity::Investor2_Node]` |
+| Property    | `isHolderOf`                         |
+| Value       | `EURCV`                              |
 
 Credential to issue USDCV:
 
@@ -215,23 +255,23 @@ Credentials to hold USDCV:
 | Property    | `isHolderOf`                                                                    |
 | Value       | `USDCV`                                                                         |
 
-| Item        | Value                    |
-| :---------- | :----------------------- |
-| holder      | `[DRW_Entity::DRW_Node]` |
-| id          | `DRW-USDCV-Holder`       |
-| description | `DRW-USDCV-Holder`       |
-| Subject     | `[DRW_Entity::DRW_Node]` |
-| Property    | `isHolderOf`             |
-| Value       | `USDCV`                  |
+| Item        | Value                                |
+| :---------- | :----------------------------------- |
+| holder      | `[Investor1_Entity::Investor1_Node]` |
+| id          | `Investor1-USDCV-Holder`             |
+| description | `Investor1-USDCV-Holder`             |
+| Subject     | `[Investor1_Entity::Investor1_Node]` |
+| Property    | `isHolderOf`                         |
+| Value       | `USDCV`                              |
 
-| Item        | Value                        |
-| :---------- | :--------------------------- |
-| holder      | `[Virtu_Entity::Virtu_Node]` |
-| id          | `Virtu-USDCV-Holder`         |
-| description | `Virtu-USDCV-Holder`         |
-| Subject     | `[Virtu_Entity::Virtu_Node]` |
-| Property    | `isHolderOf`                 |
-| Value       | `USDCV`                      |
+| Item        | Value                                |
+| :---------- | :----------------------------------- |
+| holder      | `[Investor2_Entity::Investor2_Node]` |
+| id          | `Investor2-USDCV-Holder`             |
+| description | `Investor2-USDCV-Holder`             |
+| Subject     | `[Investor2_Entity::Investor2_Node]` |
+| Property    | `isHolderOf`                         |
+| Value       | `USDCV`                              |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-offers-credential-of-token-issuer-and-holder-to-issuer) for details.
 
@@ -260,58 +300,58 @@ Registrar accepts and tokens are issued.
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#registrar-accepts-and-tokens-are-issued) for details.
 
-### 3.3 Issuer offers token transfer to DRW
+### 3.3 Issuer offers token transfer to Investor1
 
 | Actors   | Module   | Tab      |
 | :------- | :------- | :------- |
 | SG Forge | Registry | Holdings |
 
-Issuer transfers tokens to DRW. (3 dots menu on the right of the holding / `Transfer` )
+Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding / `Transfer` )
 
 | Item       | Value                                                                           |
 | :--------- | :------------------------------------------------------------------------------ |
 | Send from  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Send to    | `[DRW_Entity::DRW_Node]`                                                        |
+| Send to    | `[Investor1_Entity::Investor1_Node]`                                            |
 | Instrument | `USDCV-TESTNET`                                                                 |
 | Amount     | `8000000`                                                                       |
-| Reference  | `USDCV-TESTNET $8m placement to DRW`                                            |
+| Reference  | `USDCV-TESTNET $8m placement to Investor1`                                      |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
-### 3.4 DRW accepts transfer
+### 3.4 Investor1 accepts transfer
 
-| Actors | Module   | Tab       |
-| :----- | :------- | :-------- |
-| DRW    | Registry | Transfers |
+| Actors    | Module   | Tab       |
+| :-------- | :------- | :-------- |
+| Investor1 | Registry | Transfers |
 
-DRW accepts transfer offer. (click on offer, and then on `Accept`)
+Investor1 accepts transfer offer. (click on offer, and then on `Accept`)
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#investor1-accepts-the-transfer-offer-and-tokens-are-transferred) for details.
 
-### 4.1 DRW offers token transfer to Virtu
+### 4.1 Investor1 offers token transfer to Investor2
 
 | Actors   | Module   | Tab      |
 | :------- | :------- | :------- |
 | SG Forge | Registry | Holdings |
 
-DRW transfers tokens to Virtu. (3 dots menu on the right of the holding / `Transfer` )
+Investor1 transfers tokens to Investor2. (3 dots menu on the right of the holding / `Transfer` )
 
-| Item       | Value                                          |
-| :--------- | :--------------------------------------------- |
-| Send from  | `[DRW_Entity::DRW_Node]`                       |
-| Send to    | `[Virtu_Entity::Virtu_Node]`                   |
-| Instrument | `USDCV-TESTNET`                                |
-| Amount     | `3000000`                                      |
-| Reference  | `USDCV-TESTNET $3m transfer from DRW to Virtu` |
+| Item       | Value                                                    |
+| :--------- | :------------------------------------------------------- |
+| Send from  | `[Investor1_Entity::Investor1_Node]`                     |
+| Send to    | `[Investor2_Entity::Investor2_Node]`                     |
+| Instrument | `USDCV-TESTNET`                                          |
+| Amount     | `3000000`                                                |
+| Reference  | `USDCV-TESTNET $3m transfer from Investor1 to Investor2` |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
-### 4.2 Virtu accepts transfer
+### 4.2 Investor2 accepts transfer
 
-| Actors | Module   | Tab       |
-| :----- | :------- | :-------- |
-| Virtu  | Registry | Transfers |
+| Actors    | Module   | Tab       |
+| :-------- | :------- | :-------- |
+| Investor2 | Registry | Transfers |
 
-Virtu accepts transfer offer. (click on offer, and then on `Accept`)
+Investor2 accepts transfer offer. (click on offer, and then on `Accept`)
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#investor1-accepts-the-transfer-offer-and-tokens-are-transferred) for details.
