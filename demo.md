@@ -50,7 +50,7 @@
 | :------------------------------------------------------------------------------------------- | :--- | :----------------- | :-------- | :-------- |
 | [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅                  | ✅         | ✅         |
 | [1.2 Registrar credential](#12-registrar-credential)                                         | ✅    | -                  | -         | -         |
-| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | -    | -                  | -         | -         |
+| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | ✅    | ✅                  | -         | -         |
 
 ### Step 2: Configuring tokens
 
