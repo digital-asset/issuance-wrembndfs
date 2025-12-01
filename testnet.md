@@ -1,4 +1,4 @@
-# Demo Issuance - November, 2025 <!-- omit in toc -->
+# Testnet Issuance - November, 2025 <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
 
