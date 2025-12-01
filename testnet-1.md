@@ -165,10 +165,10 @@ Registrar creates Instrument Configuration:
 | Identifiers                 |                                                                                 |
 | Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Id                          | `XT9W5C49FJV7`                                                                  |
-| Scheme                      | ISIN                                                                            |
+| Scheme                      | `ISIN`                                                                          |
 | Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Id                          | `9W5C49FJV`                                                                     |
-| Scheme                      | DTI                                                                             |
+| Scheme                      | `DTI`                                                                           |
 | Requirement for Mint Issuer |                                                                                 |
 | Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Property                    | `isIssuerOf`                                                                    |
@@ -186,10 +186,10 @@ Registrar creates Instrument Configuration:
 | Identifiers                 |                                                                                 |
 | Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Id                          | `XTLD6JM2JN25`                                                                  |
-| Scheme                      | ISIN                                                                            |
+| Scheme                      | `ISIN`                                                                          |
 | Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Id                          | `LD6JM2JN2`                                                                     |
-| Scheme                      | DTI                                                                             |
+| Scheme                      | `DTI`                                                                           |
 | Requirement for Mint Issuer |                                                                                 |
 | Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Property                    | `isIssuerOf`                                                                    |
