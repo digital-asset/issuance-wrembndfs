@@ -14,8 +14,9 @@
   - [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities)
   - [1.2 Registrar credential](#12-registrar-credential)
   - [1.3 Registrar onboarding](#13-registrar-onboarding)
-  - [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration)
-  - [2.2 Registrar offers credentials to Issuer and Holders](#22-registrar-offers-credentials-to-issuer-and-holders)
+  - [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule)
+  - [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)
+  - [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)
   - [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)
   - [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)
   - [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1)
@@ -57,10 +58,11 @@
 
 ### Step 2: Configuring tokens
 
-| Steps                                                                                                                                                                                           | DA   | Registrar/Issuer | Investor1 | Investor2 |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :--------------- | :-------- | :-------- |
-| [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | ✅                | -         | -         |
-| [2.2 Registrar offers credentials to Issuer and Holders](#22-registrar-offers-credentials-to-issuer-and-holders)                                                                                | -    | ✅                | ✅         | ✅         |
+| Steps                                                                                                                    | DA   | Registrar/Issuer | Investor1 | Investor2 |
+| :----------------------------------------------------------------------------------------------------------------------- | :--- | :--------------- | :-------- | :-------- |
+| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | ✅                | -         | -         |
+| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | ✅                | -         | -         |
+| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | ✅                | ✅         | ✅         |
 
 ### Step 3: Issuing tokens
 
@@ -123,7 +125,7 @@ Registrar clicks on `Request Registrar Service`, and DA accepts.
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#registrar-requests-onboarding-as-a-registrar-in-the-registry) for details.
 
-### 2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration
+### 2.1 Registrar creates Allocation Factory and Transfer Rule
 
 | Actors           | Module   | Tab           |
 | :--------------- | :------- | :------------ |
@@ -134,6 +136,12 @@ Registrar clicks on `Create Allocation Factory` and `Create Transfer Rule`.
 Both boxes should turn from blue to grey.
 
 ![Allocation Factory Transfer Rule](images/AllocationFactory-TransferRule.png)
+
+### 2.2 Registrar specifies Instrument Configuration
+
+| Actors           | Module   | Tab           |
+| :--------------- | :------- | :------------ |
+| Registrar/Issuer | Registry | Configuration |
 
 Registrar creates Instrument Configuration:
 
@@ -155,7 +163,7 @@ Registrar creates Instrument Configuration:
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-specifying-the-requirement-of-the-bond-token) for details.
 
-### 2.2 Registrar offers credentials to Issuer and Holders
+### 2.3 Registrar offers credentials to Issuer and Holders
 
 | Actors                                 | Module     | Tab                 |
 | :------------------------------------- | :--------- | :------------------ |
@@ -272,7 +280,7 @@ Investor1 transfers tokens to Investor2. (3 dots menu on the right of the holdin
 | Send to    | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
 | Amount     | `3000000`                                                                                                  |
-| Reference  | `DEMO-STABLECOIN-TESTNET $3m tranfer to Investor2`                                                         |
+| Reference  | `DEMO-STABLECOIN-TESTNET $3m transfer from Investor1 to Investor2`                                         |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
