@@ -129,19 +129,19 @@ Registrar creates Instrument Configuration:
 
 | Item                        | Value                                                                                                      |
 | :-------------------------- | :--------------------------------------------------------------------------------------------------------- |
-| Instrument ID               | `SGNOTES-[CUSIP]-TESTNET`                                                                                  |
+| Instrument ID               | `DEMO-STABLECOIN-TESTNET`                                                                                  |
 | Identifiers                 |                                                                                                            |
 | Source                      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Id                          | `[CUSIP]`                                                                                                  |
-| Scheme                      | CUSIP                                                                                                      |
+| Id                          | `DEMO-STABLECOIN`                                                                                          |
+| Scheme                      | DTI                                                                                                        |
 | Requirement for Mint Issuer |                                                                                                            |
 | Credential Issuer           | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Property                    | `isIssuerOf`                                                                                               |
-| Value                       | `SGNOTES`                                                                                                  |
+| Value                       | `DEMO-STABLECOIN`                                                                                          |
 | Requirement for Holders     |                                                                                                            |
 | Credential Issuer           | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Property                    | `isHolderOf`                                                                                               |
-| Value                       | `SGNOTES`                                                                                                  |
+| Value                       | `DEMO-STABLECOIN`                                                                                          |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-specifying-the-requirement-of-the-bond-token) for details.
 
@@ -153,38 +153,38 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Registrar issues free credentials (Credentials tab), and Investor1 / Investor2 accept them (Offers tab).
 
-SG Paris Issuer of SGNOTES credential:
+SG Paris Issuer of DEMO-STABLECOIN credential:
 
 | Item        | Value                                                                        |
 | :---------- | :--------------------------------------------------------------------------- |
 | holder      | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| id          | `Investor1-SGNOTES-Issuer`                                                   |
-| description | `Investor1-SGNOTES-Issuer`                                                   |
+| id          | `Investor1-DEMO-STABLECOIN-Issuer`                                           |
+| description | `Investor1-DEMO-STABLECOIN-Issuer`                                           |
 | Subject     | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Property    | `isIssuerOf`                                                                 |
-| Value       | `SGNOTES`                                                                    |
+| Value       | `DEMO-STABLECOIN`                                                            |
 
-SG Paris Holder of SGNOTES credential:
+SG Paris Holder of DEMO-STABLECOIN credential:
 
 | Item        | Value                                                                        |
 | :---------- | :--------------------------------------------------------------------------- |
 | holder      | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| id          | `Investor1-SGNOTES-Holder`                                                   |
-| description | `Investor1-SGNOTES-Holder`                                                   |
+| id          | `Investor1-DEMO-STABLECOIN-Holder`                                           |
+| description | `Investor1-DEMO-STABLECOIN-Holder`                                           |
 | Subject     | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Property    | `isHolderOf`                                                                 |
-| Value       | `SGNOTES`                                                                    |
+| Value       | `DEMO-STABLECOIN`                                                            |
 
-Investor2 Holder of SGNOTES credential
+Investor2 Holder of DEMO-STABLECOIN credential
 
 | Item        | Value                                                                                          |
 | :---------- | :--------------------------------------------------------------------------------------------- |
 | holder      | `Cumberland-Investor2-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94` |
-| id          | `Investor2-SGNOTES-Holder`                                                                     |
-| description | `Investor2-SGNOTES-Holder`                                                                     |
+| id          | `Investor2-DEMO-STABLECOIN-Holder`                                                             |
+| description | `Investor2-DEMO-STABLECOIN-Holder`                                                             |
 | Subject     | `Cumberland-Investor2-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94` |
 | Property    | `isHolderOf`                                                                                   |
-| Value       | `SGNOTES`                                                                                      |
+| Value       | `DEMO-STABLECOIN`                                                                              |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-offers-credential-of-token-issuer-and-holder-to-issuer) for details.
 
@@ -196,10 +196,10 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
-| Instrument | `SGNOTES-[CUSIP]-TESTNET`                                                                                  |
+| Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
 | Amount     | `1000000`                                                                                                  |
 | Registrar  | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Reference  | `SGNOTES-[CUSIP]-TESTNET $1m issued Oct-2025`                                                              |
+| Reference  | `DEMO-STABLECOIN-TESTNET $1m issued Oct-2025`                                                              |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-requests-token-issuance-minting) for details.
 
@@ -224,10 +224,10 @@ Investor1 transfers tokens to Investor2
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
 | Receiver   | `Cumberland-Investor2-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94`             |
-| Instrument | `SGNOTES-[CUSIP]-TESTNET`                                                                                  |
+| Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
 | Amount     | `1000000`                                                                                                  |
 | Registar   | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Reference  | `SGNOTES-[CUSIP]-TESTNET $1m placement to Investor2`                                                       |
+| Reference  | `DEMO-STABLECOIN-TESTNET $1m placement to Investor2`                                                       |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
