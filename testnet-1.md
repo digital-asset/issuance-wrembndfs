@@ -32,6 +32,8 @@
     - [USD8m USDCV placed to Investor1](#usd8m-usdcv-placed-to-investor1)
   - [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)
   - [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2)
+    - [EUR3m EURCV transfer from Investor1 to Investor2](#eur3m-eurcv-transfer-from-investor1-to-investor2)
+    - [USD3m USDCV transfer from Investor1 to Investor2](#usd3m-usdcv-transfer-from-investor1-to-investor2)
   - [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)
 
 ## Documentation
@@ -373,6 +375,8 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Investor1 transfers tokens to Investor2. (3 dots menu on the right of the holding / `Transfer` )
 
+#### EUR3m EURCV transfer from Investor1 to Investor2
+
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
 | Send from  | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
@@ -380,6 +384,8 @@ Investor1 transfers tokens to Investor2. (3 dots menu on the right of the holdin
 | Instrument | `EURCV-TESTNET`                                                                                            |
 | Amount     | `3000000`                                                                                                  |
 | Reference  | `EURCV-TESTNET EUR3m transfer from Investor1 to Investor2`                                                 |
+
+#### USD3m USDCV transfer from Investor1 to Investor2
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
