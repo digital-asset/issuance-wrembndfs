@@ -1,4 +1,4 @@
-# Testnet Issuance #1 - November, 2025 <!-- omit in toc -->
+# Testnet Issuance #1 - December xxx, 2025 <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
 
