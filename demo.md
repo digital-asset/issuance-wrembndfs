@@ -17,8 +17,10 @@
   - [2.2 Registrar offers credentials to Issuer and Holders](#22-registrar-offers-credentials-to-issuer-and-holders)
   - [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)
   - [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)
-  - [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors)
-  - [3.4 Investor accepts transfer](#34-investor-accepts-transfer)
+  - [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1)
+  - [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)
+  - [3.5 Investor1 offers token transfer to Investor2](#35-investor1-offers-token-transfer-to-investor2)
+  - [3.6 Investor2 accepts transfer](#36-investor2-accepts-transfer)
 
 ## Documentation
 
@@ -63,10 +65,10 @@
 
 | Steps                                                                                          | DA   | Registrar/Issuer | Investor1 | Investor2 |
 | :--------------------------------------------------------------------------------------------- | :--- | :--------------- | :-------- | :-------- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -                | 📌         | -         |
-| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | 📌                | -         | -         |
-| [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors) | -    | -                | 📌         | -         |
-| [3.4 Investor accepts transfer](#34-investor-accepts-transfer)                                 | -    | -                | -         | 📌         |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -                | ✅         | -         |
+| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | ✅                | -         | -         |
+| [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors) | -    | ✅                | -         | -         |
+| [3.4 Investor accepts transfer](#34-investor-accepts-transfer)                                 | -    | -                | ✅         | -         |
 
 ## Detailed instructions
 
@@ -220,7 +222,7 @@ Registrar accepts and tokens are issued.
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#registrar-accepts-and-tokens-are-issued) for details.
 
-### 3.3 Issuer offers token transfer to Investors
+### 3.3 Issuer offers token transfer to Investor1
 
 | Actors           | Module   | Tab      |
 | :--------------- | :------- | :------- |
@@ -238,12 +240,40 @@ Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding /
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
-### 3.4 Investor accepts transfer
+### 3.4 Investor1 accepts transfer
 
 | Actors    | Module   | Tab       |
 | :-------- | :------- | :-------- |
 | Investor1 | Registry | Transfers |
 
 Investor1 accepts transfer offer. (click on offer, and then on `Accept`)
+
+See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#investor1-accepts-the-transfer-offer-and-tokens-are-transferred) for details.
+
+### 3.5 Investor1 offers token transfer to Investor2
+
+| Actors           | Module   | Tab      |
+| :--------------- | :------- | :------- |
+| Registrar/Issuer | Registry | Holdings |
+
+Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding / `Transfer` )
+
+| Item       | Value                                                                                                      |
+| :--------- | :--------------------------------------------------------------------------------------------------------- |
+| Send from  | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Send to    | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
+| Amount     | `8000000`                                                                                                  |
+| Reference  | `DEMO-STABLECOIN-TESTNET $3m tranfer to Investor2`                                                       |
+
+See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
+
+### 3.6 Investor2 accepts transfer
+
+| Actors    | Module   | Tab       |
+| :-------- | :------- | :-------- |
+| Investor2 | Registry | Transfers |
+
+Investor2 accepts transfer offer. (click on offer, and then on `Accept`)
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#investor1-accepts-the-transfer-offer-and-tokens-are-transferred) for details.
