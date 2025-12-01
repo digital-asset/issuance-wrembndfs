@@ -197,16 +197,16 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 3.1 Issuer requests token issuance (minting)
 
-| Actors    | Module   | Tab   |
-| :-------- | :------- | :---- |
-| Investor1 | Registry | Mints |
+| Actors | Module   | Tab   |
+| :----- | :------- | :---- |
+| Issuer | Registry | Mints |
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
 | Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
-| Amount     | `1000000`                                                                                                  |
+| Amount     | `10000000`                                                                                                 |
 | Registrar  | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Reference  | `DEMO-STABLECOIN-TESTNET $1m issued Oct-2025`                                                              |
+| Reference  | `DEMO-STABLECOIN-TESTNET $10m issued Nov-2025`                                                             |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-requests-token-issuance-minting) for details.
 
@@ -226,15 +226,15 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 | :-------- | :------- | :------- |
 | Investor1 | Registry | Holdings |
 
-Investor1 transfers tokens to Investor2
+Issuer transfers tokens to Investor1
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
-| Receiver   | `Cumberland-Investor2-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94`             |
+| Receiver   | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
-| Amount     | `1000000`                                                                                                  |
+| Amount     | `8000000`                                                                                                  |
 | Registar   | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Reference  | `DEMO-STABLECOIN-TESTNET $1m placement to Investor2`                                                       |
+| Reference  | `DEMO-STABLECOIN-TESTNET $8m placement to Investor1`                                                       |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
@@ -242,8 +242,8 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 | Actors    | Module   | Tab       |
 | :-------- | :------- | :-------- |
-| Investor2 | Registry | Transfers |
+| Investor1 | Registry | Transfers |
 
-Investor2 accepts transfer offer.
+Investor1 accepts transfer offer.
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#investor1-accepts-the-transfer-offer-and-tokens-are-transferred) for details.
