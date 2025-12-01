@@ -197,9 +197,9 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 3.1 Issuer requests token issuance (minting)
 
-| Actors | Module   | Tab   |
-| :----- | :------- | :---- |
-| Issuer | Registry | Mints |
+| Actors           | Module   | Tab   |
+| :--------------- | :------- | :---- |
+| Registrar/Issuer | Registry | Mints |
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
