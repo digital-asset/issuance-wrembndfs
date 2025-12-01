@@ -14,7 +14,7 @@
   - [1.2 Registrar credential](#12-registrar-credential)
   - [1.3 Registrar onboarding](#13-registrar-onboarding)
   - [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration)
-  - [2.2 / 2.3 / 2.4 / 2.5 Registrar offers credential to Issuer and Holders](#22--23--24--25-registrar-offers-credential-to-issuer-and-holders)
+  - [2.2 Registrar offers credentials to Issuer and Holders](#22-registrar-offers-credentials-to-issuer-and-holders)
   - [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)
   - [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)
   - [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors)
@@ -56,8 +56,8 @@
 
 | Steps                                                                                                                                                                                           | DA   | Registrar / Issuer | Investor1 | Investor2 |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :----------------- | :-------- | :-------- |
-| [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | 📌                  | -         | -         |
-| [2.2 / 2.3 / 2.4 / 2.5 Registrar offers credential to Issuer and Holders](#22--23--24--25-registrar-offers-credential-to-issuer-and-holders)                                                    | -    | 📌                  | 📌         | 📌         |
+| [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | ✅                  | -         | -         |
+| [2.2 Registrar offers credentials to Issuer and Holders](#22-registrar-offers-credentials-to-issuer-and-holders)                                                                                | -    | 📌                  | 📌         | 📌         |
 
 ### Step 3: Issuing tokens
 
@@ -145,46 +145,53 @@ Registrar creates Instrument Configuration:
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-specifying-the-requirement-of-the-bond-token) for details.
 
-### 2.2 / 2.3 / 2.4 / 2.5 Registrar offers credential to Issuer and Holders
+### 2.2 Registrar offers credentials to Issuer and Holders
 
-| Actors                          | Module     | Tab                 |
-| :------------------------------ | :--------- | :------------------ |
-| Registrar, Investor1, Investor2 | Credential | Credentials, Offers |
+| Actors                                  | Module     | Tab                 |
+| :-------------------------------------- | :--------- | :------------------ |
+| Registrar, Issuer, Investor1, Investor2 | Credential | Credentials, Offers |
 
-Registrar issues free credentials (Credentials tab), and Investor1 / Investor2 accept them (Offers tab).
+Registrar issues free credentials (Credentials tab), and Issuer, Investor1, and Investor2 accept them (Offers tab).
 
-SG Paris Issuer of DEMO-STABLECOIN credential:
+Credential to Issue DEMO-STABLECOIN:
 
-| Item        | Value                                                                        |
-| :---------- | :--------------------------------------------------------------------------- |
+| Item        | Value                                                                                                      |
+| :---------- | :--------------------------------------------------------------------------------------------------------- |
 | holder      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| id          | `Investor1-DEMO-STABLECOIN-Issuer`                                           |
-| description | `Investor1-DEMO-STABLECOIN-Issuer`                                           |
+| id          | `Issuer-DEMO-STABLECOIN-Issuer`                                                                            |
+| description | `Issuer-DEMO-STABLECOIN-Issuer`                                                                            |
 | Subject     | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Property    | `isIssuerOf`                                                                 |
-| Value       | `DEMO-STABLECOIN`                                                            |
+| Property    | `isIssuerOf`                                                                                               |
+| Value       | `DEMO-STABLECOIN`                                                                                          |
 
-SG Paris Holder of DEMO-STABLECOIN credential:
+Credentials to hold DEMO-STABLECOIN:
 
-| Item        | Value                                                                        |
-| :---------- | :--------------------------------------------------------------------------- |
+| Item        | Value                                                                                                      |
+| :---------- | :--------------------------------------------------------------------------------------------------------- |
 | holder      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| id          | `Investor1-DEMO-STABLECOIN-Holder`                                           |
-| description | `Investor1-DEMO-STABLECOIN-Holder`                                           |
+| id          | `Issuer-DEMO-STABLECOIN-Holder`                                                                            |
+| description | `Issuer-DEMO-STABLECOIN-Holder`                                                                            |
 | Subject     | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Property    | `isHolderOf`                                                                 |
-| Value       | `DEMO-STABLECOIN`                                                            |
+| Property    | `isHolderOf`                                                                                               |
+| Value       | `DEMO-STABLECOIN`                                                                                          |
 
-Investor2 Holder of DEMO-STABLECOIN credential
+| Item        | Value                                                                                                      |
+| :---------- | :--------------------------------------------------------------------------------------------------------- |
+| holder      | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| id          | `Investor1-DEMO-STABLECOIN-Holder`                                                                         |
+| description | `Investor1-DEMO-STABLECOIN-Holder`                                                                         |
+| Subject     | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Property    | `isHolderOf`                                                                                               |
+| Value       | `DEMO-STABLECOIN`                                                                                          |
 
-| Item        | Value                                                                                          |
-| :---------- | :--------------------------------------------------------------------------------------------- |
-| holder      | `Cumberland-Investor2-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94` |
-| id          | `Investor2-DEMO-STABLECOIN-Holder`                                                             |
-| description | `Investor2-DEMO-STABLECOIN-Holder`                                                             |
-| Subject     | `Cumberland-Investor2-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94` |
-| Property    | `isHolderOf`                                                                                   |
-| Value       | `DEMO-STABLECOIN`                                                                              |
+| Item        | Value                                                                                                      |
+| :---------- | :--------------------------------------------------------------------------------------------------------- |
+| holder      | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| id          | `Investor2-DEMO-STABLECOIN-Holder`                                                                         |
+| description | `Investor2-DEMO-STABLECOIN-Holder`                                                                         |
+| Subject     | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Property    | `isHolderOf`                                                                                               |
+| Value       | `DEMO-STABLECOIN`                                                                                          |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-offers-credential-of-token-issuer-and-holder-to-issuer) for details.
 
