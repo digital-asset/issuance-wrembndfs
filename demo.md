@@ -30,7 +30,7 @@
 
 | Entity             | Details                                                                                 | Utility UI version |
 | :----------------- | :-------------------------------------------------------------------------------------- | ------------------ |
-| Registrar & Issuer | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
+| Registrar / Issuer | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
 | Investor1          | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
 | Investor2          | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
 
@@ -38,7 +38,7 @@
 
 | Entity             | Party ID                                                                                                   |
 | :----------------- | :--------------------------------------------------------------------------------------------------------- |
-| Registrar & Issuer | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Registrar / Issuer | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Investor1          | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Investor2          | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 
@@ -46,27 +46,27 @@
 
 ### Step 1: Onboarding roles
 
-| Steps                                                                                        | DA   | Registrar | Investor1 | Investor2 |
-| :------------------------------------------------------------------------------------------- | :--- | :-------- | :--- | :--- |
-| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅         | ✅    | ✅    |
-| [1.2 Registrar credential](#12-registrar-credential)                                         | ✅    | -         | -    | -    |
-| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | -    | -         | -    | -    |
+| Steps                                                                                        | DA   | Registrar / Issuer | Investor1 | Investor2 |
+| :------------------------------------------------------------------------------------------- | :--- | :----------------- | :-------- | :-------- |
+| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅                  | ✅         | ✅         |
+| [1.2 Registrar credential](#12-registrar-credential)                                         | ✅    | -                  | -         | -         |
+| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | -    | -                  | -         | -         |
 
 ### Step 2: Configuring tokens
 
-| Steps                                                                                                                                                                                           | DA   | BR   | Registrar | Investor1 | Investor2 |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :--- | :-------- | :--- | :--- |
-| [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | -    | ✅         | -    | -    |
-| [2.2 / 2.3 / 2.4 / 2.5 Registrar offers credential to Issuer and Holders](#22--23--24--25-registrar-offers-credential-to-issuer-and-holders)                                                    | -    | -    | ✅         | ✅    | ✅    |
+| Steps                                                                                                                                                                                           | DA   | Registrar / Issuer | Investor1 | Investor2 |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :----------------- | :-------- | :-------- |
+| [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | 📌                  | -         | -         |
+| [2.2 / 2.3 / 2.4 / 2.5 Registrar offers credential to Issuer and Holders](#22--23--24--25-registrar-offers-credential-to-issuer-and-holders)                                                    | -    | 📌                  | 📌         | 📌         |
 
 ### Step 3: Issuing tokens
 
-| Steps                                                                                          | DA   | BR   | Registrar | Investor1 | Investor2 |
-| :--------------------------------------------------------------------------------------------- | :--- | :--- | :-------- | :--- | :--- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -    | -         | ✅    | -    |
-| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | -    | ✅         | -    | -    |
-| [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors) | -    | -    | -         | ✅    | -    |
-| [3.4 Investor accepts transfer](#34-investor-accepts-transfer)                                 | -    | -    | -         | -    | ✅    |
+| Steps                                                                                          | DA   | Registrar / Issuer | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------- | :--- | :----------------- | :-------- | :-------- |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -                  | 📌         | -         |
+| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | 📌                  | -         | -         |
+| [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors) | -    | -                  | 📌         | -         |
+| [3.4 Investor accepts transfer](#34-investor-accepts-transfer)                                 | -    | -                  | -         | 📌         |
 
 ## Detailed instructions
 
@@ -147,8 +147,8 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 2.2 / 2.3 / 2.4 / 2.5 Registrar offers credential to Issuer and Holders
 
-| Actors                | Module     | Tab                 |
-| :-------------------- | :--------- | :------------------ |
+| Actors                          | Module     | Tab                 |
+| :------------------------------ | :--------- | :------------------ |
 | Registrar, Investor1, Investor2 | Credential | Credentials, Offers |
 
 Registrar issues free credentials (Credentials tab), and Investor1 / Investor2 accept them (Offers tab).
@@ -158,8 +158,8 @@ SG Paris Issuer of SGNOTES credential:
 | Item        | Value                                                                        |
 | :---------- | :--------------------------------------------------------------------------- |
 | holder      | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| id          | `Investor1-SGNOTES-Issuer`                                                        |
-| description | `Investor1-SGNOTES-Issuer`                                                        |
+| id          | `Investor1-SGNOTES-Issuer`                                                   |
+| description | `Investor1-SGNOTES-Issuer`                                                   |
 | Subject     | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Property    | `isIssuerOf`                                                                 |
 | Value       | `SGNOTES`                                                                    |
@@ -169,30 +169,30 @@ SG Paris Holder of SGNOTES credential:
 | Item        | Value                                                                        |
 | :---------- | :--------------------------------------------------------------------------- |
 | holder      | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| id          | `Investor1-SGNOTES-Holder`                                                        |
-| description | `Investor1-SGNOTES-Holder`                                                        |
+| id          | `Investor1-SGNOTES-Holder`                                                   |
+| description | `Investor1-SGNOTES-Holder`                                                   |
 | Subject     | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
 | Property    | `isHolderOf`                                                                 |
 | Value       | `SGNOTES`                                                                    |
 
 Investor2 Holder of SGNOTES credential
 
-| Item        | Value                                                                                     |
-| :---------- | :---------------------------------------------------------------------------------------- |
+| Item        | Value                                                                                          |
+| :---------- | :--------------------------------------------------------------------------------------------- |
 | holder      | `Cumberland-Investor2-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94` |
 | id          | `Investor2-SGNOTES-Holder`                                                                     |
 | description | `Investor2-SGNOTES-Holder`                                                                     |
 | Subject     | `Cumberland-Investor2-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94` |
-| Property    | `isHolderOf`                                                                              |
-| Value       | `SGNOTES`                                                                                 |
+| Property    | `isHolderOf`                                                                                   |
+| Value       | `SGNOTES`                                                                                      |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-offers-credential-of-token-issuer-and-holder-to-issuer) for details.
 
 ### 3.1 Issuer requests token issuance (minting)
 
-| Actors | Module   | Tab   |
-| :----- | :------- | :---- |
-| Investor1   | Registry | Mints |
+| Actors    | Module   | Tab   |
+| :-------- | :------- | :---- |
+| Investor1 | Registry | Mints |
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
@@ -215,27 +215,27 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 3.3 Issuer offers token transfer to Investors
 
-| Actors | Module   | Tab      |
-| :----- | :------- | :------- |
-| Investor1   | Registry | Holdings |
+| Actors    | Module   | Tab      |
+| :-------- | :------- | :------- |
+| Investor1 | Registry | Holdings |
 
 Investor1 transfers tokens to Investor2
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
-| Receiver   | `Cumberland-Investor2-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94`                  |
+| Receiver   | `Cumberland-Investor2-1::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94`             |
 | Instrument | `SGNOTES-[CUSIP]-TESTNET`                                                                                  |
 | Amount     | `1000000`                                                                                                  |
 | Registar   | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Reference  | `SGNOTES-[CUSIP]-TESTNET $1m placement to Investor2`                                                            |
+| Reference  | `SGNOTES-[CUSIP]-TESTNET $1m placement to Investor2`                                                       |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
 ### 3.4 Investor accepts transfer
 
-| Actors | Module   | Tab       |
-| :----- | :------- | :-------- |
-| Investor2   | Registry | Transfers |
+| Actors    | Module   | Tab       |
+| :-------- | :------- | :-------- |
+| Investor2 | Registry | Transfers |
 
 Investor2 accepts transfer offer.
 
