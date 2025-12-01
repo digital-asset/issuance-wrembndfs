@@ -264,14 +264,14 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 | :--------------- | :------- | :------- |
 | Registrar/Issuer | Registry | Holdings |
 
-Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding / `Transfer` )
+Investor1 transfers tokens to Investor2. (3 dots menu on the right of the holding / `Transfer` )
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
-| Send from  | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Send to    | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Send from  | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Send to    | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
-| Amount     | `8000000`                                                                                                  |
+| Amount     | `3000000`                                                                                                  |
 | Reference  | `DEMO-STABLECOIN-TESTNET $3m tranfer to Investor2`                                                         |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
