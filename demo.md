@@ -157,10 +157,10 @@ SG Paris Issuer of DEMO-STABLECOIN credential:
 
 | Item        | Value                                                                        |
 | :---------- | :--------------------------------------------------------------------------- |
-| holder      | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| holder      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | id          | `Investor1-DEMO-STABLECOIN-Issuer`                                           |
 | description | `Investor1-DEMO-STABLECOIN-Issuer`                                           |
-| Subject     | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Subject     | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Property    | `isIssuerOf`                                                                 |
 | Value       | `DEMO-STABLECOIN`                                                            |
 
@@ -168,10 +168,10 @@ SG Paris Holder of DEMO-STABLECOIN credential:
 
 | Item        | Value                                                                        |
 | :---------- | :--------------------------------------------------------------------------- |
-| holder      | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| holder      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | id          | `Investor1-DEMO-STABLECOIN-Holder`                                           |
 | description | `Investor1-DEMO-STABLECOIN-Holder`                                           |
-| Subject     | `sgpm::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Subject     | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Property    | `isHolderOf`                                                                 |
 | Value       | `DEMO-STABLECOIN`                                                            |
 
