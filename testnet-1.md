@@ -1,4 +1,4 @@
-# Testnet Issuance - November, 2025 <!-- omit in toc -->
+# Testnet Issuance #1 - November, 2025 <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -52,7 +52,7 @@
 
 | Steps                                                                                        | DA   | SG Forge | Investor1 | Investor2 |
 | :------------------------------------------------------------------------------------------- | :--- | :------- | :-------- | :-------- |
-| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅        | 📌         | 📌         |
+| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅        | ✅         | ✅         |
 | [1.2 Registrar credential](#12-registrar-credential)                                         | ✅    | 📌        | -         | -         |
 | [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | ✅    | ✅        | -         | -         |
 
