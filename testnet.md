@@ -68,15 +68,15 @@
 | :----------------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
 | [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting) | -    | -        | 📌    | -     |
 | [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued) | -    | 📌        | -    | -     |
-| [3.3 Issuer offers token transfer to DRW](#33-issuer-offers-token-transfer-to-investor1)   | -    | 📌        | -    | -     |
-| [3.4 DRW accepts transfer](#34-investor1-accepts-transfer)                                 | -    | -        | 📌    | -     |
+| [3.3 Issuer offers token transfer to DRW](#33-issuer-offers-token-transfer-to-drw)         | -    | 📌        | -    | -     |
+| [3.4 DRW accepts transfer](#34-drw-accepts-transfer)                                       | -    | -        | 📌    | -     |
 
 ### Step 4: Transfering tokens
 
-| Steps                                                                                      | DA   | SG Forge | DRW  | Virtu |
-| :----------------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
-| [4.1 DRW offers token transfer to Virtu](#41-investor1-offers-token-transfer-to-investor2) | -    | -        | 📌    | -     |
-| [4.2 Virtu accepts transfer](#42-investor2-accepts-transfer)                               | -    | -        | -    | 📌     |
+| Steps                                                                            | DA   | SG Forge | DRW  | Virtu |
+| :------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
+| [4.1 DRW offers token transfer to Virtu](#41-drw-offers-token-transfer-to-virtu) | -    | -        | 📌    | -     |
+| [4.2 Virtu accepts transfer](#42-virtu-accepts-transfer)                         | -    | -        | -    | 📌     |
 
 ## Detailed instructions
 
