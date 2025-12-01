@@ -58,10 +58,11 @@
 
 ### Step 2: Configuring tokens
 
-| Steps                                                                                                                                                                                           | DA   | SG Forge | DRW  | Virtu |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
-| [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | 📌        | -    | -     |
-| [2.2 Registrar offers credentials to Issuer and Holders](#22-registrar-offers-credentials-to-issuer-and-holders)                                                                                | -    | 📌        | 📌    | 📌     |
+| Steps                                                                                                                    | DA   | SG Forge | DRW  | Virtu |
+| :----------------------------------------------------------------------------------------------------------------------- | :--- | :------- | :--- | :---- |
+| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | 📌        | -    | -     |
+| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | 📌        | 📌    | 📌     |
+| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | 📌        | 📌    | 📌     |
 
 ### Step 3: Issuing tokens
 
