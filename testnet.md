@@ -33,17 +33,17 @@
 
 | Entity                      | Details | Utility UI version |
 | :-------------------------- | :------ | ------------------ |
-| SG Forge (Registrar/Issuer) |         | 0.10.2             |
-| DRW (Investor1)             |         | 0.10.2             |
-| Virtu (Investor2)           |         | 0.10.2             |
+| SG Forge (Registrar/Issuer) | [TBC]   | [0.10.2 TBC]       |
+| DRW (Investor1)             | [TBC]   | [0.10.2 TBC]       |
+| Virtu (Investor2)           | [TBC]   | [0.10.2 TBC]       |
 
 ## PartyIDs
 
-| Entity   | Party ID                                                                                                   |
-| :------- | :--------------------------------------------------------------------------------------------------------- |
+| Entity   | Party ID                                                                        |
+| :------- | :------------------------------------------------------------------------------ |
 | SG Forge | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| DRW      | `[DRW_Entity::DRW_Node]` |
-| Virtu    | `[Virtu_Entity::Virtu_Node]` |
+| DRW      | `[DRW_Entity::DRW_Node]`                                                        |
+| Virtu    | `[Virtu_Entity::Virtu_Node]`                                                    |
 
 ## Status
 
@@ -98,14 +98,14 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 DA offers Registrar credential (Credentials tab), and Registrar accepts it (Offers tab):
 
-| Item        | Value                                                                                                      |
-| :---------- | :--------------------------------------------------------------------------------------------------------- |
-| holder      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| id          | `Registrar demo simonletort.da`                                                                            |
-| description | `Registrar demo simonletort.da`                                                                            |
-| Subject     | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Property    | `hasRegistryRole`                                                                                          |
-| Value       | `Registrar`                                                                                                |
+| Item        | Value                                                                           |
+| :---------- | :------------------------------------------------------------------------------ |
+| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| id          | `SG Forge Registrar Credential`                                                 |
+| description | `SG Forge Registrar Credential`                                                 |
+| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property    | `hasRegistryRole`                                                               |
+| Value       | `Registrar`                                                                     |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#provider-offers-registrar-credential)for details.
 
@@ -137,21 +137,21 @@ Both boxes should turn from blue to grey.
 
 Registrar creates Instrument Configuration:
 
-| Item                        | Value                                                                                                      |
-| :-------------------------- | :--------------------------------------------------------------------------------------------------------- |
-| Instrument ID               | `DEMO-STABLECOIN-TESTNET`                                                                                  |
-| Identifiers                 |                                                                                                            |
-| Source                      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Id                          | `DEMO-STABLECOIN`                                                                                          |
-| Scheme                      | DTI                                                                                                        |
-| Requirement for Mint Issuer |                                                                                                            |
-| Credential Issuer           | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Property                    | `isIssuerOf`                                                                                               |
-| Value                       | `DEMO-STABLECOIN`                                                                                          |
-| Requirement for Holders     |                                                                                                            |
-| Credential Issuer           | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Property                    | `isHolderOf`                                                                                               |
-| Value                       | `DEMO-STABLECOIN`                                                                                          |
+| Item                        | Value                                                                           |
+| :-------------------------- | :------------------------------------------------------------------------------ |
+| Instrument ID               | `USDCV-TESTNET`                                                                 |
+| Identifiers                 |                                                                                 |
+| Source                      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Id                          | `USDCV`                                                                         |
+| Scheme                      | DTI                                                                             |
+| Requirement for Mint Issuer |                                                                                 |
+| Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property                    | `isIssuerOf`                                                                    |
+| Value                       | `USDCV`                                                                         |
+| Requirement for Holders     |                                                                                 |
+| Credential Issuer           | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property                    | `isHolderOf`                                                                    |
+| Value                       | `USDCV`                                                                         |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-specifying-the-requirement-of-the-bond-token) for details.
 
@@ -163,45 +163,45 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Registrar issues free credentials (Credentials tab), and Issuer, DRW, and Virtu accept them (Offers tab).
 
-Credential to issue DEMO-STABLECOIN:
+Credential to issue USDCV:
 
-| Item        | Value                                                                                                      |
-| :---------- | :--------------------------------------------------------------------------------------------------------- |
-| holder      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| id          | `Issuer-DEMO-STABLECOIN-Issuer`                                                                            |
-| description | `Issuer-DEMO-STABLECOIN-Issuer`                                                                            |
-| Subject     | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Property    | `isIssuerOf`                                                                                               |
-| Value       | `DEMO-STABLECOIN`                                                                                          |
+| Item        | Value                                                                           |
+| :---------- | :------------------------------------------------------------------------------ |
+| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| id          | `Issuer-USDCV-Issuer`                                                           |
+| description | `Issuer-USDCV-Issuer`                                                           |
+| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property    | `isIssuerOf`                                                                    |
+| Value       | `USDCV`                                                                         |
 
-Credentials to hold DEMO-STABLECOIN:
+Credentials to hold USDCV:
 
-| Item        | Value                                                                                                      |
-| :---------- | :--------------------------------------------------------------------------------------------------------- |
-| holder      | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| id          | `Issuer-DEMO-STABLECOIN-Holder`                                                                            |
-| description | `Issuer-DEMO-STABLECOIN-Holder`                                                                            |
-| Subject     | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Property    | `isHolderOf`                                                                                               |
-| Value       | `DEMO-STABLECOIN`                                                                                          |
+| Item        | Value                                                                           |
+| :---------- | :------------------------------------------------------------------------------ |
+| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| id          | `Issuer-USDCV-Holder`                                                           |
+| description | `Issuer-USDCV-Holder`                                                           |
+| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property    | `isHolderOf`                                                                    |
+| Value       | `USDCV`                                                                         |
 
-| Item        | Value                                                                                                      |
-| :---------- | :--------------------------------------------------------------------------------------------------------- |
+| Item        | Value                    |
+| :---------- | :----------------------- |
 | holder      | `[DRW_Entity::DRW_Node]` |
-| id          | `DRW-DEMO-STABLECOIN-Holder`                                                                               |
-| description | `DRW-DEMO-STABLECOIN-Holder`                                                                               |
+| id          | `DRW-USDCV-Holder`       |
+| description | `DRW-USDCV-Holder`       |
 | Subject     | `[DRW_Entity::DRW_Node]` |
-| Property    | `isHolderOf`                                                                                               |
-| Value       | `DEMO-STABLECOIN`                                                                                          |
+| Property    | `isHolderOf`             |
+| Value       | `USDCV`                  |
 
-| Item        | Value                                                                                                      |
-| :---------- | :--------------------------------------------------------------------------------------------------------- |
+| Item        | Value                        |
+| :---------- | :--------------------------- |
 | holder      | `[Virtu_Entity::Virtu_Node]` |
-| id          | `Virtu-DEMO-STABLECOIN-Holder`                                                                             |
-| description | `Virtu-DEMO-STABLECOIN-Holder`                                                                             |
+| id          | `Virtu-USDCV-Holder`         |
+| description | `Virtu-USDCV-Holder`         |
 | Subject     | `[Virtu_Entity::Virtu_Node]` |
-| Property    | `isHolderOf`                                                                                               |
-| Value       | `DEMO-STABLECOIN`                                                                                          |
+| Property    | `isHolderOf`                 |
+| Value       | `USDCV`                      |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/2-credentials.html#registrar-offers-credential-of-token-issuer-and-holder-to-issuer) for details.
 
@@ -211,12 +211,12 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 | :------- | :------- | :---- |
 | SG Forge | Registry | Mints |
 
-| Item       | Value                                                                                                      |
-| :--------- | :--------------------------------------------------------------------------------------------------------- |
-| Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
-| Amount     | `10000000`                                                                                                 |
-| Registrar  | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Reference  | `DEMO-STABLECOIN-TESTNET $10m issued Nov-2025`                                                             |
+| Item       | Value                                                                           |
+| :--------- | :------------------------------------------------------------------------------ |
+| Instrument | `USDCV-TESTNET`                                                                 |
+| Amount     | `10000000`                                                                      |
+| Registrar  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Reference  | `USDCV-TESTNET $10m issued Nov-2025`                                            |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-requests-token-issuance-minting) for details.
 
@@ -238,13 +238,13 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Issuer transfers tokens to DRW. (3 dots menu on the right of the holding / `Transfer` )
 
-| Item       | Value                                                                                                      |
-| :--------- | :--------------------------------------------------------------------------------------------------------- |
-| Send from  | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Send to    | `[DRW_Entity::DRW_Node]` |
-| Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
-| Amount     | `8000000`                                                                                                  |
-| Reference  | `DEMO-STABLECOIN-TESTNET $8m placement to DRW`                                                             |
+| Item       | Value                                                                           |
+| :--------- | :------------------------------------------------------------------------------ |
+| Send from  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Send to    | `[DRW_Entity::DRW_Node]`                                                        |
+| Instrument | `USDCV-TESTNET`                                                                 |
+| Amount     | `8000000`                                                                       |
+| Reference  | `USDCV-TESTNET $8m placement to DRW`                                            |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
@@ -266,13 +266,13 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 DRW transfers tokens to Virtu. (3 dots menu on the right of the holding / `Transfer` )
 
-| Item       | Value                                                                                                      |
-| :--------- | :--------------------------------------------------------------------------------------------------------- |
-| Send from  | `[DRW_Entity::DRW_Node]` |
-| Send to    | `[Virtu_Entity::Virtu_Node]` |
-| Instrument | `DEMO-STABLECOIN-TESTNET`                                                                                  |
-| Amount     | `3000000`                                                                                                  |
-| Reference  | `DEMO-STABLECOIN-TESTNET $3m transfer from DRW to Virtu`                                                   |
+| Item       | Value                                          |
+| :--------- | :--------------------------------------------- |
+| Send from  | `[DRW_Entity::DRW_Node]`                       |
+| Send to    | `[Virtu_Entity::Virtu_Node]`                   |
+| Instrument | `USDCV-TESTNET`                                |
+| Amount     | `3000000`                                      |
+| Reference  | `USDCV-TESTNET $3m transfer from DRW to Virtu` |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
