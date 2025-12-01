@@ -28,45 +28,45 @@
 
 ## URLs & Versions
 
-| Entity             | Details                                                                                 | Utility UI version |
-| :----------------- | :-------------------------------------------------------------------------------------- | ------------------ |
-| Registrar / Issuer | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
-| Investor1          | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
-| Investor2          | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
+| Entity           | Details                                                                                 | Utility UI version |
+| :--------------- | :-------------------------------------------------------------------------------------- | ------------------ |
+| Registrar/Issuer | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
+| Investor1        | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
+| Investor2        | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
 
 ## PartyIDs
 
-| Entity             | Party ID                                                                                                   |
-| :----------------- | :--------------------------------------------------------------------------------------------------------- |
-| Registrar / Issuer | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Investor1          | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
-| Investor2          | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Entity           | Party ID                                                                                                   |
+| :--------------- | :--------------------------------------------------------------------------------------------------------- |
+| Registrar/Issuer | `auth0_007c692daee9ec6d8caa116b09d8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Investor1        | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
+| Investor2        | `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 
 ## Status
 
 ### Step 1: Onboarding roles
 
-| Steps                                                                                        | DA   | Registrar / Issuer | Investor1 | Investor2 |
-| :------------------------------------------------------------------------------------------- | :--- | :----------------- | :-------- | :-------- |
-| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅                  | ✅         | ✅         |
-| [1.2 Registrar credential](#12-registrar-credential)                                         | ✅    | -                  | -         | -         |
-| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | ✅    | ✅                  | -         | -         |
+| Steps                                                                                        | DA   | Registrar/Issuer | Investor1 | Investor2 |
+| :------------------------------------------------------------------------------------------- | :--- | :--------------- | :-------- | :-------- |
+| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅                | ✅         | ✅         |
+| [1.2 Registrar credential](#12-registrar-credential)                                         | ✅    | -                | -         | -         |
+| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | ✅    | ✅                | -         | -         |
 
 ### Step 2: Configuring tokens
 
-| Steps                                                                                                                                                                                           | DA   | Registrar / Issuer | Investor1 | Investor2 |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :----------------- | :-------- | :-------- |
-| [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | ✅                  | -         | -         |
-| [2.2 Registrar offers credentials to Issuer and Holders](#22-registrar-offers-credentials-to-issuer-and-holders)                                                                                | -    | ✅                  | ✅         | ✅         |
+| Steps                                                                                                                                                                                           | DA   | Registrar/Issuer | Investor1 | Investor2 |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--- | :--------------- | :-------- | :-------- |
+| [2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration](#21-registrar-creates-allocation-factory-transfer-rule-and-specifies-instrument-configuration) | -    | ✅                | -         | -         |
+| [2.2 Registrar offers credentials to Issuer and Holders](#22-registrar-offers-credentials-to-issuer-and-holders)                                                                                | -    | ✅                | ✅         | ✅         |
 
 ### Step 3: Issuing tokens
 
-| Steps                                                                                          | DA   | Registrar / Issuer | Investor1 | Investor2 |
-| :--------------------------------------------------------------------------------------------- | :--- | :----------------- | :-------- | :-------- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -                  | 📌         | -         |
-| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | 📌                  | -         | -         |
-| [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors) | -    | -                  | 📌         | -         |
-| [3.4 Investor accepts transfer](#34-investor-accepts-transfer)                                 | -    | -                  | -         | 📌         |
+| Steps                                                                                          | DA   | Registrar/Issuer | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------- | :--- | :--------------- | :-------- | :-------- |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -                | 📌         | -         |
+| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | 📌                | -         | -         |
+| [3.3 Issuer offers token transfer to Investors](#33-issuer-offers-token-transfer-to-investors) | -    | -                | 📌         | -         |
+| [3.4 Investor accepts transfer](#34-investor-accepts-transfer)                                 | -    | -                | -         | 📌         |
 
 ## Detailed instructions
 
@@ -82,9 +82,9 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 1.2 Registrar credential
 
-| Actors       | Module     | Tab                 |
-| :----------- | :--------- | :------------------ |
-| DA, Registar | Credential | Credentials, Offers |
+| Actors                | Module     | Tab                 |
+| :-------------------- | :--------- | :------------------ |
+| DA, Registar / Issuer | Credential | Credentials, Offers |
 
 DA offers Registrar credential (Credentials tab), and Registrar accepts it (Offers tab):
 
@@ -101,9 +101,9 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 1.3 Registrar onboarding
 
-| Actors        | Module   | Tab        |
-| :------------ | :------- | :--------- |
-| Registrar, DA | Registry | Onboarding |
+| Actors               | Module   | Tab        |
+| :------------------- | :------- | :--------- |
+| Registrar/Issuer, DA | Registry | Onboarding |
 
 Registrar clicks on `Request Registrar Service`, and DA accepts.
 
@@ -115,9 +115,9 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 2.1 Registrar creates Allocation Factory, Transfer Rule and specifies Instrument Configuration
 
-| Actors    | Module   | Tab           |
-| :-------- | :------- | :------------ |
-| Registrar | Registry | Configuration |
+| Actors           | Module   | Tab           |
+| :--------------- | :------- | :------------ |
+| Registrar/Issuer | Registry | Configuration |
 
 Registrar clicks on `Create Allocation Factory` and `Create Transfer Rule`.
 
@@ -147,9 +147,9 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 2.2 Registrar offers credentials to Issuer and Holders
 
-| Actors                                  | Module     | Tab                 |
-| :-------------------------------------- | :--------- | :------------------ |
-| Registrar, Issuer, Investor1, Investor2 | Credential | Credentials, Offers |
+| Actors                                 | Module     | Tab                 |
+| :------------------------------------- | :--------- | :------------------ |
+| Registrar/Issuer, Investor1, Investor2 | Credential | Credentials, Offers |
 
 Registrar issues free credentials (Credentials tab), and Issuer, Investor1, and Investor2 accept them (Offers tab).
 
@@ -212,9 +212,9 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 3.2 Registrar accepts and tokens are issued
 
-| Actors    | Module   | Tab   |
-| :-------- | :------- | :---- |
-| Registrar | Registry | Mints |
+| Actors           | Module   | Tab   |
+| :--------------- | :------- | :---- |
+| Registrar/Issuer | Registry | Mints |
 
 Registrar accepts and tokens are issued.
 
