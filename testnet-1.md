@@ -35,6 +35,7 @@
     - [EUR3m EURCV transfer from Investor1 to Investor2](#eur3m-eurcv-transfer-from-investor1-to-investor2)
     - [USD3m USDCV transfer from Investor1 to Investor2](#usd3m-usdcv-transfer-from-investor1-to-investor2)
   - [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)
+- [Test 'freeze asset' feature](#test-freeze-asset-feature)
 
 ## Documentation
 
