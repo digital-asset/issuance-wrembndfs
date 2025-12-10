@@ -406,3 +406,11 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 Investor2 accepts transfer offer. (click on offer, and then on `Accept`)
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#investor1-accepts-the-transfer-offer-and-tokens-are-transferred) for details.
+
+## Test 'freeze asset' feature
+
+- SG Forge as Registrar revoked Investor2 "isHolderOf: EURCV" credentials
+- Investor2 tries to transfer EURCV => fails
+- Investor2 tries to receives EURCV => fails
+
+https://github.com/user-attachments/assets/c01b0bd9-742d-4b13-b77c-09f1c9492704
