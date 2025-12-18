@@ -1,4 +1,4 @@
-# Testnet Issuance #1 - December xxx, 2025 <!-- omit in toc -->
+# Testnet Issuance #2 - December xxx, 2025 <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -12,6 +12,8 @@
   - [Step 4: Transfering tokens](#step-4-transfering-tokens)
 - [Detailed instructions](#detailed-instructions)
   - [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities)
+  - [1.2 Provider credential](#12-provider-credential)
+  - [1.3 Onboard Provider](#13-onboard-provider)
   - [1.2 Registrar credential](#12-registrar-credential)
   - [1.3 Registrar onboarding](#13-registrar-onboarding)
   - [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule)
@@ -73,27 +75,27 @@
 
 ### Step 2: Configuring tokens
 
-| Steps                                                                                                                    | DA   | SG Forge | Investor1 | Investor2 |
-| :----------------------------------------------------------------------------------------------------------------------- | :--- | :------- | :-------- | :-------- |
-| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | ✅        | -         | -         |
-| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | 📌        | -         | -         |
-| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | 📌        | 📌         | 📌         |
+| Steps                                                                                                                    | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
+| :----------------------------------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
+| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | ✅                    | -                 | -         | -         |
+| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | 📌                    | -                 | -         | -         |
+| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | 📌                    | -                 | 📌         | 📌         |
 
 ### Step 3: Issuing tokens
 
-| Steps                                                                                          | DA   | SG Forge | Investor1 | Investor2 |
-| :--------------------------------------------------------------------------------------------- | :--- | :------- | :-------- | :-------- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | 📌        | -         | -         |
-| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | 📌        | -         | -         |
-| [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | 📌        | -         | -         |
-| [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)                               | -    | -        | 📌         | -         |
+| Steps                                                                                          | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | 📌                    | -                 | -         | -         |
+| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | 📌                    | -                 | -         | -         |
+| [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | 📌                    | -                 | -         | -         |
+| [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)                               | -    | -                    | -                 | 📌         | -         |
 
 ### Step 4: Transfering tokens
 
-| Steps                                                                                                | DA   | SG Forge | Investor1 | Investor2 |
-| :--------------------------------------------------------------------------------------------------- | :--- | :------- | :-------- | :-------- |
-| [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2) | -    | -        | 📌         | -         |
-| [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)                                     | -    | -        | -         | 📌         |
+| Steps                                                                                                | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
+| [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2) | -    | -                    | -                 | 📌         | -         |
+| [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)                                     | -    | -                    | -                 | -         | 📌         |
 
 ## Detailed instructions
 
@@ -107,11 +109,59 @@ All entities `Request Credential User Service`.
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#onboarding-credential-services-for-all-entities) for details.
 
+### 1.2 Provider credential
+
+| Actors                   | Module     | Tab                 |
+| :----------------------- | :--------- | :------------------ |
+| DA, SG Forge (Registrar) | Credential | Credentials, Offers |
+
+DA offers Provider credential (Credentials tab), and SG Forge (Registrar) accepts it (Offers tab):
+
+| Item        | Value                                                                           |
+| :---------- | :------------------------------------------------------------------------------ |
+| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| id          | `SG Forge provider`                                                             |
+| description | `SG Forge provider`                                                             |
+| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property    | `hasRegistryRole`                                                               |
+| Value       | `Provider`                                                                      |
+
+| Item        | Value                                                                                                   |
+| :---------- | :------------------------------------------------------------------------------------------------------ |
+| beneficiary | `DigitalAsset-UtilityFeeReceiver::12202679f2bbe57d8cba9ef3cee847ac8239df0877105ab1f01a77d47477fdce1204` |
+| weight      | 0.20                                                                                                    |
+
+| Actors                   | Module   | Tab                   |
+| :----------------------- | :------- | :-------------------- |
+| DA, SG Forge (Registrar) | Settings | Commercial Agreements |
+
+DA offers Commercial Agreement, and SG Forge (Registrar) accepts it:
+
+| Item                   | Value                                                                                                   |
+| :--------------------- | :------------------------------------------------------------------------------------------------------ |
+| user                   | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                         |
+| fee receiver           | `DigitalAsset-UtilityFeeReceiver::12202679f2bbe57d8cba9ef3cee847ac8239df0877105ab1f01a77d47477fdce1204` |
+| credential billing fee | 1.75 USD                                                                                                |
+| base fee per day       | 138.90 USD                                                                                              |
+| billing period         | 10 min                                                                                                  |
+
+See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#provider-credential) for details.
+
+### 1.3 Onboard Provider
+
+| Actors                   | Module   | Tab        |
+| :----------------------- | :------- | :--------- |
+| DA, SG Forge (Registrar) | Registry | Onboarding |
+
+SG Forge (Registrar) clicks on `Requests Provider Service`, and DA accepts.
+
+See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#onboard-provider) for details.
+
 ### 1.2 Registrar credential
 
-| Actors                | Module     | Tab                 |
-| :-------------------- | :--------- | :------------------ |
-| DA, Registar / Issuer | Credential | Credentials, Offers |
+| Actors                  | Module     | Tab                 |
+| :---------------------- | :--------- | :------------------ |
+| DA, SG Forge (Registar) | Credential | Credentials, Offers |
 
 DA offers Registrar credential (Credentials tab), and Registrar accepts it (Offers tab):
 
