@@ -6,7 +6,11 @@ Runbooks for issuance wrembndfs
 
 Runbook for the [demo issuance](/demo.md).
 
-## Testnet Issuance #1 - December xx, 2025
+## Testnet Issuance #1 - December 10, 2025
+
+Runbook for the [testnet issuance](/testnet-1.md).
+
+## Testnet Issuance #2 - January xx, 2025
 
 Runbook for the [testnet issuance](/testnet-1.md).
 
