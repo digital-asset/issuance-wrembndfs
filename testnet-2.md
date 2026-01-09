@@ -47,6 +47,8 @@
 
 ## URLs & Versions
 
+> PRE-REQUISITE, NEEDS A SECOND PARTY ID FOR SG FORGE TO BE PROVISIONNED
+
 | Entity               | Details                                                                                 | Utility UI version |
 | :------------------- | :-------------------------------------------------------------------------------------- | ------------------ |
 | SG Forge (Registrar) | https://utility-socgen.test.broadridge.catalyst.intellecteu.io                          | 0.9.3              |
@@ -69,15 +71,15 @@
 
 | Steps                                                                                        | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
 | :------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅                    | 📌                 | ✅         | ✅         |
-| [1.2 Registrar credential](#12-registrar-credential)                                         | ✅    | ✅                    | 📌                 | -         | -         |
-| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | ✅    | ✅                    | 📌                 | -         | -         |
+| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | 📌                    | 📌                 | 📌         | 📌         |
+| [1.2 Registrar credential](#12-registrar-credential)                                         | 📌    | 📌                    | 📌                 | -         | -         |
+| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | 📌    | 📌                    | 📌                 | -         | -         |
 
 ### Step 2: Configuring tokens
 
 | Steps                                                                                                                    | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
 | :----------------------------------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | ✅                    | -                 | -         | -         |
+| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | 📌                    | -                 | -         | -         |
 | [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | 📌                    | -                 | -         | -         |
 | [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | 📌                    | -                 | 📌         | 📌         |
 
