@@ -81,15 +81,15 @@
 | :----------------------------------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
 | [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | 📌                    | -                 | -         | -         |
 | [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | 📌                    | -                 | -         | -         |
-| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | 📌                    | -                 | 📌         | 📌         |
+| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | 📌                    | 📌                 | 📌         | 📌         |
 
 ### Step 3: Issuing tokens
 
 | Steps                                                                                          | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
 | :--------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | 📌                    | -                 | -         | -         |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -                    | 📌                | -         | -         |
 | [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | 📌                    | -                 | -         | -         |
-| [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | 📌                    | -                 | -         | -         |
+| [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | -                    | 📌                 | -         | -         |
 | [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)                               | -    | -                    | -                 | 📌         | -         |
 
 ### Step 4: Transfering tokens
