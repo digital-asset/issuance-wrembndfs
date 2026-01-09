@@ -87,7 +87,7 @@
 
 | Steps                                                                                          | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
 | :--------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -                    | 📌                | -         | -         |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -                    | 📌                 | -         | -         |
 | [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | 📌                    | -                 | -         | -         |
 | [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | -                    | 📌                 | -         | -         |
 | [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)                               | -    | -                    | -                 | 📌         | -         |
@@ -144,8 +144,10 @@ DA offers Commercial Agreement, and SG Forge (Registrar) accepts it:
 | user                   | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                         |
 | fee receiver           | `DigitalAsset-UtilityFeeReceiver::12202679f2bbe57d8cba9ef3cee847ac8239df0877105ab1f01a77d47477fdce1204` |
 | credential billing fee | 1.75 USD                                                                                                |
-| base fee per day       | 138.90 USD                                                                                              |
+| base fee per day       | 0.00 USD                                                                                                |
 | billing period         | 10 min                                                                                                  |
+
+Note, base fee is paid off-ledger in fiat.
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#provider-credential) for details.
 
