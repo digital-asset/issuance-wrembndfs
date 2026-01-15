@@ -95,27 +95,27 @@
 
 ### Step 2: Configuring tokens
 
-| Steps                                                                                                                    | DA   | BR   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
-| :----------------------------------------------------------------------------------------------------------------------- | :--- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | -    | 📌                    | -                 | -         | -         |
-| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | -    | 📌                    | -                 | -         | -         |
-| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | -    | 📌                    | 📌                 | 📌         | 📌         |
+| Steps                                                                                                                    | DA   | BR   | SGF  | SGF-Issuer | Investor1 | Investor2 |
+| :----------------------------------------------------------------------------------------------------------------------- | :--- | :--- | :--- | :--------- | :-------- | :-------- |
+| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | -    | 📌    | -          | -         | -         |
+| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | -    | 📌    | -          | -         | -         |
+| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | -    | 📌    | 📌          | 📌         | 📌         |
 
 ### Step 3: Issuing tokens
 
-| Steps                                                                                          | DA   | BR   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
-| :--------------------------------------------------------------------------------------------- | :--- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -    |                      | 📌                 | -         | -         |
-| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | -    | 📌                    | -                 | -         | -         |
-| [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | -    | -                    | 📌                 | -         | -         |
-| [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)                               | -    | -    | -                    | -                 | 📌         | -         |
+| Steps                                                                                          | DA   | BR   | SGF  | SGF-Issuer | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------- | :--- | :--- | :--- | :--------- | :-------- | :-------- |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -    |      | 📌          | -         | -         |
+| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | -    | 📌    | -          | -         | -         |
+| [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | -    | -    | 📌          | -         | -         |
+| [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)                               | -    | -    | -    | -          | 📌         | -         |
 
 ### Step 4: Transfering tokens
 
-| Steps                                                                                                | DA   | BR   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
-| :--------------------------------------------------------------------------------------------------- | :--- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2) | -    | -    | -                    | -                 | 📌         | -         |
-| [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)                                     | -    | -    | -                    | -                 | -         | 📌         |
+| Steps                                                                                                | DA   | BR   | SGF  | SGF-Issuer | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------------- | :--- | :--- | :--- | :--------- | :-------- | :-------- |
+| [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2) | -    | -    | -    | -          | 📌         | -         |
+| [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)                                     | -    | -    | -    | -          | -         | 📌         |
 
 ## Detailed instructions
 
@@ -418,8 +418,8 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 3.1 Issuer requests token issuance (minting)
 
-| Actors   | Module   | Tab   |
-| :------- | :------- | :---- |
+| Actors     | Module   | Tab   |
+| :--------- | :------- | :---- |
 | SGF-Issuer | Registry | Mints |
 
 #### EUR10m EURCV issued
@@ -444,9 +444,9 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 3.2 Registrar accepts and tokens are issued
 
-| Actors   | Module   | Tab   |
-| :------- | :------- | :---- |
-| SGF | Registry | Mints |
+| Actors | Module   | Tab   |
+| :----- | :------- | :---- |
+| SGF    | Registry | Mints |
 
 Registrar accepts and tokens are issued.
 
@@ -454,8 +454,8 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 3.3 Issuer offers token transfer to Investor1
 
-| Actors   | Module   | Tab      |
-| :------- | :------- | :------- |
+| Actors     | Module   | Tab      |
+| :--------- | :------- | :------- |
 | SGF-Issuer | Registry | Holdings |
 
 Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding / `Transfer` )
@@ -467,8 +467,8 @@ Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding /
 | Send from  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                            |
 | Send to    | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Instrument | `EURCV-TESTNET`                                                                                            |
-| Amount     | `10000000`                                                                                                  |
-| Reference  | `EURCV-TESTNET EUR10m minted to Investor1`                                                               |
+| Amount     | `10000000`                                                                                                 |
+| Reference  | `EURCV-TESTNET EUR10m minted to Investor1`                                                                 |
 
 #### USD10m USDCV minted to Investor1
 
@@ -477,8 +477,8 @@ Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding /
 | Send from  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                            |
 | Send to    | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Instrument | `USDCV-TESTNET`                                                                                            |
-| Amount     | `10000000`                                                                                                  |
-| Reference  | `USDCV-TESTNET USD10m monted to Investor1`                                                               |
+| Amount     | `10000000`                                                                                                 |
+| Reference  | `USDCV-TESTNET USD10m monted to Investor1`                                                                 |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
@@ -494,8 +494,8 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 4.1 Investor1 offers token transfer to Investor2
 
-| Actors   | Module   | Tab      |
-| :------- | :------- | :------- |
+| Actors    | Module   | Tab      |
+| :-------- | :------- | :------- |
 | Investor1 | Registry | Holdings |
 
 Investor1 transfers tokens to Investor2. (3 dots menu on the right of the holding / `Transfer` )
