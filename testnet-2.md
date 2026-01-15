@@ -77,7 +77,7 @@
 
 | Steps                                                | IEU  | BR   | SGF  | SGF-Issuer | Investor1 | Investor2 |
 | :--------------------------------------------------- | :--- | :--- | :--- | :--------- | :-------- | :-------- |
-| [0.1 Setup BR node](#01-setup-br-node)               | ✅    | 📌    | -    | -          | -         | -         |
+| [0.1 Setup BR node](#01-setup-br-node)               | ✅    | ✅    | -    | -          | -         | -         |
 | [0.2 Setup SGF node](#02-setup-sgf-node)             | ✅    | -    | ✅    | ✅          | -         | -         |
 | [0.3 Setup Investor1 node](#03-setup-investor1-node) | -    | -    | -    | -          | ✅         | -         |
 | [0.4 Setup Investor2 node](#04-setup-investor2-node) | -    | -    | -    | -          | -         | ✅         |
@@ -86,12 +86,12 @@
 
 | Steps                                                                                        | DA   | BR   | SGF  | SGF-Issuer | Investor1 | Investor2 |
 | :------------------------------------------------------------------------------------------- | :--- | :--- | :--- | :--------- | :-------- | :-------- |
-| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | 📌    | 📌    | 📌          | ✅         | ✅         |
-| [1.2 Provider credential](#12-provider-credential)                                           | ✅    | 📌    | -    | -          | -         | -         |
-| [1.3 Provider onboarding](#13-provider-onboarding)                                           | ✅    | 📌    | -    | -          | -         | -         |
-| [1.4 Provider configuration](#14-provider-configuration)                                     | -    | 📌    | -    | -          | -         | -         |
-| [1.5 Registrar credential](#15-registrar-credential)                                         | -    | 📌    | 📌    | -          | -         | -         |
-| [1.6 Registrar onboarding](#16-registrar-onboarding)                                         | -    | 📌    | 📌    | -          | -         | -         |
+| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅    | ✅    | 📌          | ✅         | ✅         |
+| [1.2 Provider credential](#12-provider-credential)                                           | ✅    | ✅    | -    | -          | -         | -         |
+| [1.3 Provider onboarding](#13-provider-onboarding)                                           | ✅    | ✅    | -    | -          | -         | -         |
+| [1.4 Provider configuration](#14-provider-configuration)                                     | -    | ✅    | -    | -          | -         | -         |
+| [1.5 Registrar credential](#15-registrar-credential)                                         | -    | ✅    | ✅    | -          | -         | -         |
+| [1.6 Registrar onboarding](#16-registrar-onboarding)                                         | -    | ✅    | ✅    | -          | -         | -         |
 
 ### Step 2: Configuring tokens
 
