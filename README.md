@@ -14,6 +14,10 @@ Runbook for the [testnet issuance](/testnet-1.md).
 
 Runbook for the [testnet issuance](/testnet-2.md).
 
-## Mainnet Issuance - xxx
+## Testnet Issuance #3 - January xx, 2025
+
+Runbook for the [testnet issuance](/testnet-3.md).
+
+## Mainnet Issuance - January xx, 2025
 
 Runbook for the [mainnet issuance](/mainnet.md).
