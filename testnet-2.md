@@ -53,10 +53,9 @@
 
 ## URLs & Versions
 
-> PRE-REQUISITE, NEEDS A SECOND PARTY ID FOR SG FORGE TO BE PROVISIONNED
-
 | Entity               | Details                                                                                 | Utility UI version |
 | :------------------- | :-------------------------------------------------------------------------------------- | ------------------ |
+| Broadridge (BR)      | https://utility-broadridge.test.broadridge.catalyst.intellecteu.io                      | 0.10.16            |
 | SG Forge (Registrar) | https://utility-socgen.test.broadridge.catalyst.intellecteu.io                          | 0.10.16            |
 | SG Forge (Issuer)    | https://utility-socgen.test.broadridge.catalyst.intellecteu.io                          | 0.10.16            |
 | Investor1            | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.16            |
