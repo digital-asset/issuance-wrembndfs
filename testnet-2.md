@@ -80,13 +80,13 @@
 | [0.1 Setup BR node](#01-setup-br-node)               | ✅    | 📌    | -    | -          | -         | -         |
 | [0.2 Setup SGF node](#02-setup-sgf-node)             | ✅    | -    | 📌    | 📌          | -         | -         |
 | [0.3 Setup Investor1 node](#03-setup-investor1-node) | -    | -    | -    | -          | ✅         | -         |
-| [0.4 Setup Investor2 node](#04-setup-investor2-node) | -    | -    | -    | -          | ✅         | -         |
+| [0.4 Setup Investor2 node](#04-setup-investor2-node) | -    | -    | -    | -          | -         | ✅         |
 
 ### Step 1: Onboarding roles
 
 | Steps                                                                                        | DA   | BR   | SGF  | SGF-Issuer | Investor1 | Investor2 |
 | :------------------------------------------------------------------------------------------- | :--- | :--- | :--- | :--------- | :-------- | :-------- |
-| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅    | ✅    | 📌          | ✅         | 📌         |
+| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | 📌    | 📌    | 📌          | ✅         | 📌         |
 | [1.2 Provider credential](#12-provider-credential)                                           | ✅    | ✅    | -    | -          | -         | -         |
 | [1.3 Provider onboarding](#13-provider-onboarding)                                           | ✅    | ✅    | -    | -          | -         | -         |
 | [1.4 Provider configuration](#14-provider-configuration)                                     | -    | ✅    | -    | -          | -         | -         |
@@ -95,27 +95,27 @@
 
 ### Step 2: Configuring tokens
 
-| Steps                                                                                                                    | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
-| :----------------------------------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | 📌                    | -                 | -         | -         |
-| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | 📌                    | -                 | -         | -         |
-| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | 📌                    | 📌                 | 📌         | 📌         |
+| Steps                                                                                                                    | DA   | BR   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
+| :----------------------------------------------------------------------------------------------------------------------- | :--- | :--- | :------------------- | :---------------- | :-------- | :-------- |
+| [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule) | -    | -    | 📌                    | -                 | -         | -         |
+| [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)                     | -    | -    | 📌                    | -                 | -         | -         |
+| [2.3 Registrar offers credentials to Issuer and Holders](#23-registrar-offers-credentials-to-issuer-and-holders)         | -    | -    | 📌                    | 📌                 | 📌         | 📌         |
 
 ### Step 3: Issuing tokens
 
-| Steps                                                                                          | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
-| :--------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -                    | 📌                 | -         | -         |
-| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | 📌                    | -                 | -         | -         |
-| [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | -                    | 📌                 | -         | -         |
-| [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)                               | -    | -                    | -                 | 📌         | -         |
+| Steps                                                                                          | DA   | BR   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------- | :--- | :--- | :------------------- | :---------------- | :-------- | :-------- |
+| [3.1 Issuer requests token issuance (minting)](#31-issuer-requests-token-issuance-minting)     | -    | -    |                      | 📌                 | -         | -         |
+| [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)     | -    | -    | 📌                    | -                 | -         | -         |
+| [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1) | -    | -    | -                    | 📌                 | -         | -         |
+| [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)                               | -    | -    | -                    | -                 | 📌         | -         |
 
 ### Step 4: Transfering tokens
 
-| Steps                                                                                                | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
-| :--------------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2) | -    | -                    | -                 | 📌         | -         |
-| [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)                                     | -    | -                    | -                 | -         | 📌         |
+| Steps                                                                                                | DA   | BR   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
+| :--------------------------------------------------------------------------------------------------- | :--- | :--- | :------------------- | :---------------- | :-------- | :-------- |
+| [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2) | -    | -    | -                    | -                 | 📌         | -         |
+| [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)                                     | -    | -    | -                    | -                 | -         | 📌         |
 
 ## Detailed instructions
 
@@ -331,25 +331,25 @@ Registrar issues free credentials (Credentials tab), and Issuer, Investor1, and 
 
 #### Credential to issue EURCV
 
-| Item        | Value                                                                           |
-| :---------- | :------------------------------------------------------------------------------ |
-| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| id          | `Issuer-EURCV-Issuer`                                                           |
-| description | `Issuer-EURCV-Issuer`                                                           |
-| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Property    | `isIssuerOf`                                                                    |
-| Value       | `EURCV`                                                                         |
+| Item        | Value                                                                                  |
+| :---------- | :------------------------------------------------------------------------------------- |
+| holder      | `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| id          | `Issuer-EURCV-Issuer`                                                                  |
+| description | `Issuer-EURCV-Issuer`                                                                  |
+| Subject     | `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property    | `isIssuerOf`                                                                           |
+| Value       | `EURCV`                                                                                |
 
 #### Credentials to hold EURCV
 
-| Item        | Value                                                                           |
-| :---------- | :------------------------------------------------------------------------------ |
-| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| id          | `Issuer-EURCV-Holder`                                                           |
-| description | `Issuer-EURCV-Holder`                                                           |
-| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Property    | `isHolderOf`                                                                    |
-| Value       | `EURCV`                                                                         |
+| Item        | Value                                                                                  |
+| :---------- | :------------------------------------------------------------------------------------- |
+| holder      | `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| id          | `Issuer-EURCV-Holder`                                                                  |
+| description | `Issuer-EURCV-Holder`                                                                  |
+| Subject     | `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property    | `isHolderOf`                                                                           |
+| Value       | `EURCV`                                                                                |
 
 | Item        | Value                                                                                                      |
 | :---------- | :--------------------------------------------------------------------------------------------------------- |
@@ -371,25 +371,25 @@ Registrar issues free credentials (Credentials tab), and Issuer, Investor1, and 
 
 #### Credential to issue USDCV
 
-| Item        | Value                                                                           |
-| :---------- | :------------------------------------------------------------------------------ |
-| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| id          | `Issuer-USDCV-Issuer`                                                           |
-| description | `Issuer-USDCV-Issuer`                                                           |
-| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Property    | `isIssuerOf`                                                                    |
-| Value       | `USDCV`                                                                         |
+| Item        | Value                                                                                  |
+| :---------- | :------------------------------------------------------------------------------------- |
+| holder      | `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| id          | `Issuer-USDCV-Issuer`                                                                  |
+| description | `Issuer-USDCV-Issuer`                                                                  |
+| Subject     | `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property    | `isIssuerOf`                                                                           |
+| Value       | `USDCV`                                                                                |
 
 #### Credentials to hold USDCV
 
-| Item        | Value                                                                           |
-| :---------- | :------------------------------------------------------------------------------ |
-| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| id          | `Issuer-USDCV-Holder`                                                           |
-| description | `Issuer-USDCV-Holder`                                                           |
-| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Property    | `isHolderOf`                                                                    |
-| Value       | `USDCV`                                                                         |
+| Item        | Value                                                                                  |
+| :---------- | :------------------------------------------------------------------------------------- |
+| holder      | `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| id          | `Issuer-USDCV-Holder`                                                                  |
+| description | `Issuer-USDCV-Holder`                                                                  |
+| Subject     | `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
+| Property    | `isHolderOf`                                                                           |
+| Value       | `USDCV`                                                                                |
 
 | Item        | Value                                                                                                      |
 | :---------- | :--------------------------------------------------------------------------------------------------------- |
