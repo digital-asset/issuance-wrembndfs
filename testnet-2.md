@@ -282,6 +282,8 @@ Instrument Configuration ensures that:
 - Only entities with a credential `isIssuerOf=[TOKEN]` from `[REGISTRAR]` can issue `[TOKEN]`
 - Only entities with a credential `isHolderOf=[TOKEN]` from `[REGISTRAR]` can hold `[TOKEN]`
 
+> If there is already an `instrument configuration` for these assets, either modify it or archive it before creating a new one.
+
 #### EURCV Instrument Configuration
 
 | Item                        | Value                                                                           |
