@@ -6,16 +6,22 @@
 - [URLs \& Versions](#urls--versions)
 - [PartyIDs](#partyids)
 - [Status](#status)
+  - [Step 0: Infrastructure Setup](#step-0-infrastructure-setup)
   - [Step 1: Onboarding roles](#step-1-onboarding-roles)
   - [Step 2: Configuring tokens](#step-2-configuring-tokens)
   - [Step 3: Issuing tokens](#step-3-issuing-tokens)
   - [Step 4: Transfering tokens](#step-4-transfering-tokens)
 - [Detailed instructions](#detailed-instructions)
+  - [0.1 Setup BR node](#01-setup-br-node)
+  - [0.2 Setup SGF node](#02-setup-sgf-node)
+  - [0.3 Setup Investor1 node](#03-setup-investor1-node)
+  - [0.4 Setup Investor2 node](#04-setup-investor2-node)
   - [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities)
   - [1.2 Provider credential](#12-provider-credential)
-  - [1.3 Onboard Provider](#13-onboard-provider)
-  - [1.2 Registrar credential](#12-registrar-credential)
-  - [1.3 Registrar onboarding](#13-registrar-onboarding)
+  - [1.3 Provider onboarding](#13-provider-onboarding)
+  - [1.4 Provider configuration](#14-provider-configuration)
+  - [1.5 Registrar credential](#15-registrar-credential)
+  - [1.6 Registrar onboarding](#16-registrar-onboarding)
   - [2.1 Registrar creates Allocation Factory and Transfer Rule](#21-registrar-creates-allocation-factory-and-transfer-rule)
   - [2.2 Registrar specifies Instrument Configuration](#22-registrar-specifies-instrument-configuration)
     - [EURCV Instrument Configuration](#eurcv-instrument-configuration)
@@ -51,15 +57,16 @@
 
 | Entity               | Details                                                                                 | Utility UI version |
 | :------------------- | :-------------------------------------------------------------------------------------- | ------------------ |
-| SG Forge (Registrar) | https://utility-socgen.test.broadridge.catalyst.intellecteu.io                          | 0.9.3              |
-| SG Forge (Issuer)    | https://utility-socgen.test.broadridge.catalyst.intellecteu.io                          | 0.9.3              |
-| Investor1            | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
-| Investor2            | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.2             |
+| SG Forge (Registrar) | https://utility-socgen.test.broadridge.catalyst.intellecteu.io                          | 0.10.16            |
+| SG Forge (Issuer)    | https://utility-socgen.test.broadridge.catalyst.intellecteu.io                          | 0.10.16            |
+| Investor1            | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.16            |
+| Investor2            | https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding | 0.10.16            |
 
 ## PartyIDs
 
 | Entity               | Party ID                                                                                                   |
 | :------------------- | :--------------------------------------------------------------------------------------------------------- |
+| Broadridge           | `broadridge-provider::1220992258bad53ba6cb1aa634bb912d457f3e0382892ced2d00b4cac654e6e52259`                |
 | SG Forge (Registrar) | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                            |
 | SG Forge (Issuer)    | `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                     |
 | Investor1            | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
@@ -67,13 +74,25 @@
 
 ## Status
 
+### Step 0: Infrastructure Setup
+
+| Steps                                                | IEU  | BR   | SGF  | SGF-Issuer | Investor1 | Investor2 |
+| :--------------------------------------------------- | :--- | :--- | :--- | :--------- | :-------- | :-------- |
+| [0.1 Setup BR node](#01-setup-br-node)               | ✅    | 📌    | -    | -          | -         | -         |
+| [0.2 Setup SGF node](#02-setup-sgf-node)             | ✅    | -    | 📌    | 📌          | -         | -         |
+| [0.3 Setup Investor1 node](#03-setup-investor1-node) | -    | -    | -    | -          | ✅         | -         |
+| [0.4 Setup Investor2 node](#04-setup-investor2-node) | -    | -    | -    | -          | ✅         | -         |
+
 ### Step 1: Onboarding roles
 
-| Steps                                                                                        | DA   | SG Forge (Registrar) | SG Forge (Issuer) | Investor1 | Investor2 |
-| :------------------------------------------------------------------------------------------- | :--- | :------------------- | :---------------- | :-------- | :-------- |
-| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | 📌                    | 📌                 | 📌         | 📌         |
-| [1.2 Registrar credential](#12-registrar-credential)                                         | 📌    | 📌                    | 📌                 | -         | -         |
-| [1.3 Registrar onboarding](#13-registrar-onboarding)                                         | 📌    | 📌                    | 📌                 | -         | -         |
+| Steps                                                                                        | DA   | BR   | SGF  | SGF-Issuer | Investor1 | Investor2 |
+| :------------------------------------------------------------------------------------------- | :--- | :--- | :--- | :--------- | :-------- | :-------- |
+| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | ✅    | ✅    | 📌          | ✅         | 📌         |
+| [1.2 Provider credential](#12-provider-credential)                                           | ✅    | ✅    | -    | -          | -         | -         |
+| [1.3 Provider onboarding](#13-provider-onboarding)                                           | ✅    | ✅    | -    | -          | -         | -         |
+| [1.4 Provider configuration](#14-provider-configuration)                                     | -    | ✅    | -    | -          | -         | -         |
+| [1.5 Registrar credential](#15-registrar-credential)                                         | -    | ✅    | ✅    | -          | -         | -         |
+| [1.6 Registrar onboarding](#16-registrar-onboarding)                                         | -    | ✅    | ✅    | -          | -         | -         |
 
 ### Step 2: Configuring tokens
 
@@ -101,6 +120,56 @@
 
 ## Detailed instructions
 
+### 0.1 Setup BR node
+
+IEU setup BR node on testnet:
+
+- url: https://utility-broadridge.broadridge.catalyst.intellecteu.io
+- DA CN Utility version: 0.10.16
+- partyIDs: `broadridge-provider::1220992258bad53ba6cb1aa634bb912d457f3e0382892ced2d00b4cac654e6e52259`
+- access credentials shared securely
+
+BR confirms that they are able to access (no IP restriction issues, no firewall issues, no polling issues).
+
+BR turns off `Network Polling` and `Websockets` to avoid potential corporate firewall issues.
+
+![Polling_Websocket_off](images/Polling_Websocket_off.png)
+
+### 0.2 Setup SGF node
+
+IEU setup SGF node on testnet:
+
+- url: https://utility-socgen.broadridge.catalyst.intellecteu.io
+- DA CN Utility version: 0.10.16
+- partyIDs:
+  - `sgforge::12203e601bb3021da99f2105b460ef92f083faf716377991a636c52b11bda56c6cf1`
+  - `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`
+- access credentials shared securely
+
+SGF (Registar) and SGF (Issuer) confirm that they are able to access (no IP restriction issues, no firewall issues).
+
+### 0.3 Setup Investor1 node
+
+Investor1 setup node on testnet:
+
+- url: https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding
+- DA CN Utility version: 0.10.16
+- partyIDs: `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca`
+- access credentials shared securely
+
+Investor1 confirms that they are able to access.
+
+### 0.4 Setup Investor2 node
+
+Investor2 setup node on testnet:
+
+- url: https://validator-pool-001-utility.utility.cnu.testnet.da-int.net/credential/onboarding
+- DA CN Utility version: 0.10.16
+- partyIDs: `auth0_007c692dafef3d5476ff3ddd16e8::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca`
+- access credentials shared securely
+
+Investor1 confirms that they are able to access.
+
 ### 1.1 Credential User Service for all entities
 
 | Actor        | Module     | Tab        |
@@ -113,61 +182,56 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 ### 1.2 Provider credential
 
-| Actors                   | Module     | Tab                 |
-| :----------------------- | :--------- | :------------------ |
-| DA, SG Forge (Registrar) | Credential | Credentials, Offers |
+| Actors | Module     | Tab                 |
+| :----- | :--------- | :------------------ |
+| DA, BR | Credential | Credentials, Offers |
 
-DA offers Provider credential (Credentials tab), and SG Forge (Registrar) accepts it (Offers tab):
+DA offers Provider credential (Credentials tab), and BR accepts it (Offers tab):
 
-| Item        | Value                                                                           |
-| :---------- | :------------------------------------------------------------------------------ |
-| holder      | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| id          | `SG Forge provider`                                                             |
-| description | `SG Forge provider`                                                             |
-| Subject     | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3` |
-| Property    | `hasRegistryRole`                                                               |
-| Value       | `Provider`                                                                      |
-
-| Item        | Value                                                                                                   |
-| :---------- | :------------------------------------------------------------------------------------------------------ |
-| beneficiary | `DigitalAsset-UtilityFeeReceiver::12202679f2bbe57d8cba9ef3cee847ac8239df0877105ab1f01a77d47477fdce1204` |
-| weight      | 0.20                                                                                                    |
-
-| Actors                   | Module   | Tab                   |
-| :----------------------- | :------- | :-------------------- |
-| DA, SG Forge (Registrar) | Settings | Commercial Agreements |
-
-DA offers Commercial Agreement, and SG Forge (Registrar) accepts it:
-
-| Item                   | Value                                                                                                   |
-| :--------------------- | :------------------------------------------------------------------------------------------------------ |
-| user                   | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                         |
-| fee receiver           | `DigitalAsset-UtilityFeeReceiver::12202679f2bbe57d8cba9ef3cee847ac8239df0877105ab1f01a77d47477fdce1204` |
-| credential billing fee | 1.75 USD                                                                                                |
-| base fee per day       | 0.00 USD                                                                                                |
-| billing period         | 10 min                                                                                                  |
-
-Note, base fee is paid off-ledger in fiat.
+| Item        | Value                                                                                       |
+| :---------- | :------------------------------------------------------------------------------------------ |
+| holder      | `broadridge-provider::1220992258bad53ba6cb1aa634bb912d457f3e0382892ced2d00b4cac654e6e52259` |
+| id          | `Broadridge provider`                                                                       |
+| description | `Broadridge provider`                                                                       |
+| Subject     | `broadridge-provider::1220992258bad53ba6cb1aa634bb912d457f3e0382892ced2d00b4cac654e6e52259` |
+| Property    | `hasRegistryRole`                                                                           |
+| Value       | `Provider`                                                                                  |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#provider-credential) for details.
 
-### 1.3 Onboard Provider
+### 1.3 Provider onboarding
 
-| Actors                   | Module   | Tab        |
-| :----------------------- | :------- | :--------- |
-| DA, SG Forge (Registrar) | Registry | Onboarding |
+| Actors | Module   | Tab        |
+| :----- | :------- | :--------- |
+| BR, DA | Registry | Onboarding |
 
-SG Forge (Registrar) clicks on `Requests Provider Service`, and DA accepts.
+Registrar/Issuer clicks on `Request Provider Service`, and DA accepts it.
 
-See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#onboard-provider) for details.
+DA can refer to this [procedure on how to accept Provider Service requests](https://docs.google.com/document/d/1puEcCTnA0WBs17xiuZdVFEyxKQxYm9UB7DsmSFk4lgQ/edit?tab=t.0#heading=h.aipczhdl5gnn).
 
-### 1.2 Registrar credential
+### 1.4 Provider configuration
+
+| Actors | Module   | Tab            |
+| :----- | :------- | :------------- |
+| BR     | Registry | Configurations |
+
+BR creates Provider Configurations: `Required Credentials for Registrars`
+
+| Item              | Value                                                                                       |
+| :---------------- | :------------------------------------------------------------------------------------------ |
+| credential issuer | `broadridge-provider::1220992258bad53ba6cb1aa634bb912d457f3e0382892ced2d00b4cac654e6e52259` |
+| Property          | `hasRegistryRole`                                                                           |
+| Value             | `Registrar`                                                                                 |
+
+See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#registrar-requests-onboarding-as-a-registrar-in-the-registry) for details.
+
+### 1.5 Registrar credential
 
 | Actors                  | Module     | Tab                 |
 | :---------------------- | :--------- | :------------------ |
-| DA, SG Forge (Registar) | Credential | Credentials, Offers |
+| BR, SG Forge (Registar) | Credential | Credentials, Offers |
 
-DA offers Registrar credential (Credentials tab), and Registrar accepts it (Offers tab):
+BR offers Registrar credential (Credentials tab), and Registrar accepts it (Offers tab):
 
 | Item        | Value                                                                           |
 | :---------- | :------------------------------------------------------------------------------ |
@@ -180,13 +244,13 @@ DA offers Registrar credential (Credentials tab), and Registrar accepts it (Offe
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#provider-offers-registrar-credential)for details.
 
-### 1.3 Registrar onboarding
+### 1.6 Registrar onboarding
 
 | Actors       | Module   | Tab        |
 | :----------- | :------- | :--------- |
 | SG Forge, DA | Registry | Onboarding |
 
-Registrar clicks on `Request Registrar Service`, and DA accepts.
+Registrar clicks on `Request Registrar Service`, and BR accepts.
 
 | Item     | Value                                                                                                |
 | :------- | :--------------------------------------------------------------------------------------------------- |
