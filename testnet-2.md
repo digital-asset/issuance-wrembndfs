@@ -36,8 +36,8 @@
     - [USD10m USDCV issued](#usd10m-usdcv-issued)
   - [3.2 Registrar accepts and tokens are issued](#32-registrar-accepts-and-tokens-are-issued)
   - [3.3 Issuer offers token transfer to Investor1](#33-issuer-offers-token-transfer-to-investor1)
-    - [EUR8m EURCV placed to Investor1](#eur8m-eurcv-placed-to-investor1)
-    - [USD8m USDCV placed to Investor1](#usd8m-usdcv-placed-to-investor1)
+    - [EUR10m EURCV minted to Investor1](#eur10m-eurcv-minted-to-investor1)
+    - [USD10m USDCV minted to Investor1](#usd10m-usdcv-minted-to-investor1)
   - [3.4 Investor1 accepts transfer](#34-investor1-accepts-transfer)
   - [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2)
     - [EUR3m EURCV transfer from Investor1 to Investor2](#eur3m-eurcv-transfer-from-investor1-to-investor2)
@@ -251,9 +251,9 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Registrar clicks on `Request Registrar Service`, and BR accepts.
 
-| Item     | Value                                                                                                |
-| :------- | :--------------------------------------------------------------------------------------------------- |
-| Provider | `DigitalAsset-UtilityOperator::12202679f2bbe57d8cba9ef3cee847ac8239df0877105ab1f01a77d47477fdce1204` |
+| Item     | Value                                                                                       |
+| :------- | :------------------------------------------------------------------------------------------ |
+| Provider | `broadridge-provider::1220992258bad53ba6cb1aa634bb912d457f3e0382892ced2d00b4cac654e6e52259` |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/1-onboarding.html#registrar-requests-onboarding-as-a-registrar-in-the-registry) for details.
 
@@ -276,6 +276,11 @@ Both boxes should turn from blue to grey.
 | SG Forge | Registry | Configuration |
 
 Registrar creates Instrument Configuration:
+
+Instrument Configuration ensures that:
+
+- Only entities with a credential `isIssuerOf=[TOKEN]` from `[REGISTRAR]` can issue `[TOKEN]`
+- Only entities with a credential `isHolderOf=[TOKEN]` from `[REGISTRAR]` can hold `[TOKEN]`
 
 #### EURCV Instrument Configuration
 
@@ -415,7 +420,7 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 | Actors   | Module   | Tab   |
 | :------- | :------- | :---- |
-| SG Forge | Registry | Mints |
+| SGF-Issuer | Registry | Mints |
 
 #### EUR10m EURCV issued
 
@@ -441,7 +446,7 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 | Actors   | Module   | Tab   |
 | :------- | :------- | :---- |
-| SG Forge | Registry | Mints |
+| SGF | Registry | Mints |
 
 Registrar accepts and tokens are issued.
 
@@ -451,29 +456,29 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 | Actors   | Module   | Tab      |
 | :------- | :------- | :------- |
-| SG Forge | Registry | Holdings |
+| SGF-Issuer | Registry | Holdings |
 
 Issuer transfers tokens to Investor1. (3 dots menu on the right of the holding / `Transfer` )
 
-#### EUR8m EURCV placed to Investor1
+#### EUR10m EURCV minted to Investor1
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
 | Send from  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                            |
 | Send to    | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Instrument | `EURCV-TESTNET`                                                                                            |
-| Amount     | `8000000`                                                                                                  |
-| Reference  | `EURCV-TESTNET EUR8m placement to Investor1`                                                               |
+| Amount     | `10000000`                                                                                                  |
+| Reference  | `EURCV-TESTNET EUR10m minted to Investor1`                                                               |
 
-#### USD8m USDCV placed to Investor1
+#### USD10m USDCV minted to Investor1
 
 | Item       | Value                                                                                                      |
 | :--------- | :--------------------------------------------------------------------------------------------------------- |
 | Send from  | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                            |
 | Send to    | `auth0_007c692dafd3a671ed48e985f245::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca` |
 | Instrument | `USDCV-TESTNET`                                                                                            |
-| Amount     | `8000000`                                                                                                  |
-| Reference  | `USDCV-TESTNET USD8m placement to Investor1`                                                               |
+| Amount     | `10000000`                                                                                                  |
+| Reference  | `USDCV-TESTNET USD10m monted to Investor1`                                                               |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-investor1) for details.
 
@@ -491,7 +496,7 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 | Actors   | Module   | Tab      |
 | :------- | :------- | :------- |
-| SG Forge | Registry | Holdings |
+| Investor1 | Registry | Holdings |
 
 Investor1 transfers tokens to Investor2. (3 dots menu on the right of the holding / `Transfer` )
 
