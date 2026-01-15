@@ -78,7 +78,7 @@
 | Steps                                                | IEU  | BR   | SGF  | SGF-Issuer | Investor1 | Investor2 |
 | :--------------------------------------------------- | :--- | :--- | :--- | :--------- | :-------- | :-------- |
 | [0.1 Setup BR node](#01-setup-br-node)               | ✅    | 📌    | -    | -          | -         | -         |
-| [0.2 Setup SGF node](#02-setup-sgf-node)             | ✅    | -    | 📌    | 📌          | -         | -         |
+| [0.2 Setup SGF node](#02-setup-sgf-node)             | ✅    | -    | ✅    | ✅          | -         | -         |
 | [0.3 Setup Investor1 node](#03-setup-investor1-node) | -    | -    | -    | -          | ✅         | -         |
 | [0.4 Setup Investor2 node](#04-setup-investor2-node) | -    | -    | -    | -          | -         | ✅         |
 
