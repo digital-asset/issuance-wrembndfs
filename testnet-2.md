@@ -114,8 +114,8 @@
 
 | Steps                                                                                                | DA   | BR   | SGF  | SGF-Issuer | Investor1 | Investor2 |
 | :--------------------------------------------------------------------------------------------------- | :--- | :--- | :--- | :--------- | :-------- | :-------- |
-| [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2) | -    | -    | -    | -          | 📌         | -         |
-| [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)                                     | -    | -    | -    | -          | -         | 📌         |
+| [4.1 Investor1 offers token transfer to Investor2](#41-investor1-offers-token-transfer-to-investor2) | -    | -    | -    | -          | ✅         | -         |
+| [4.2 Investor2 accepts transfer](#42-investor2-accepts-transfer)                                     | -    | -    | -    | -          | -         | ✅         |
 
 ## Detailed instructions
 
@@ -492,6 +492,8 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 Investor1 accepts transfer offer. (click on offer, and then on `Accept`)
 
+![Investor1_holdings.png](images/Investor1_holdings.png)
+
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#investor1-accepts-the-transfer-offer-and-tokens-are-transferred) for details.
 
 ### 4.1 Investor1 offers token transfer to Investor2
@@ -511,6 +513,8 @@ Investor1 transfers tokens to Investor2. (3 dots menu on the right of the holdin
 | Instrument | `EURCV-TESTNET`                                                                                            |
 | Amount     | `3000000`                                                                                                  |
 | Reference  | `EURCV-TESTNET EUR3m transfer from Investor1 to Investor2`                                                 |
+
+![investor1_investor2_transfer.png](images/investor1_investor2_transfer.png)
 
 #### USD3m USDCV transfer from Investor1 to Investor2
 
