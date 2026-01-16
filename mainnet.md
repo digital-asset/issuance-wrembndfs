@@ -10,7 +10,6 @@
   - [Step 1: Onboarding roles](#step-1-onboarding-roles)
   - [Step 2: Configuring tokens](#step-2-configuring-tokens)
   - [Step 3: Issuing tokens](#step-3-issuing-tokens)
-  - [Step 4: Transfering tokens](#step-4-transfering-tokens)
 - [Detailed instructions](#detailed-instructions)
   - [0.1 Setup BR node](#01-setup-br-node)
   - [0.2 Setup SGF node](#02-setup-sgf-node)
@@ -39,10 +38,6 @@
     - [EUR10m EURCV minted to Virtu](#eur10m-eurcv-minted-to-virtu)
     - [USD10m USDCV minted to Virtu](#usd10m-usdcv-minted-to-virtu)
   - [3.4 Virtu accepts transfer](#34-virtu-accepts-transfer)
-  - [4.1 Virtu offers token transfer to DRW](#41-virtu-offers-token-transfer-to-drw)
-    - [EUR3m EURCV transfer from Virtu to DRW](#eur3m-eurcv-transfer-from-virtu-to-drw)
-    - [USD3m USDCV transfer from Virtu to DRW](#usd3m-usdcv-transfer-from-virtu-to-drw)
-  - [4.2 DRW accepts transfer](#42-drw-accepts-transfer)
 
 ## Documentation
 
@@ -108,13 +103,6 @@
 | [3.2 Registrar accepts and tokens are minted](#32-registrar-accepts-and-tokens-are-minted) | -    | -    | 📌    | -          | -     | -    |
 | [3.3 Issuer offers token transfer to Virtu](#33-issuer-offers-token-transfer-to-virtu)     | -    | -    | -    | 📌          | -     | -    |
 | [3.4 Virtu accepts transfer](#34-virtu-accepts-transfer)                                   | -    | -    | -    | -          | 📌     | -    |
-
-### Step 4: Transfering tokens
-
-| Steps                                                                            | DA   | BR   | SGF  | SGF-Issuer | Virtu | DRW  |
-| :------------------------------------------------------------------------------- | :--- | :--- | :--- | :--------- | :---- | :--- |
-| [4.1 Virtu offers token transfer to DRW](#41-virtu-offers-token-transfer-to-drw) | -    | -    | -    | -          | 📌     | -    |
-| [4.2 DRW accepts transfer](#42-drw-accepts-transfer)                             | -    | -    | -    | -          | -     | 📌    |
 
 ## Detailed instructions
 
@@ -490,45 +478,5 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 | Virtu  | Registry | Transfers |
 
 Virtu accepts transfer offer. (click on offer, and then on `Accept`)
-
-See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#Virtu-accepts-the-transfer-offer-and-tokens-are-transferred) for details.
-
-### 4.1 Virtu offers token transfer to DRW
-
-| Actors | Module   | Tab      |
-| :----- | :------- | :------- |
-| Virtu  | Registry | Holdings |
-
-Virtu transfers tokens to DRW. (3 dots menu on the right of the holding / `Transfer` )
-
-#### EUR3m EURCV transfer from Virtu to DRW
-
-| Item       | Value                                                                                                      |
-| :--------- | :--------------------------------------------------------------------------------------------------------- |
-| Send from  | `virtu-holder::12203e15163301aebdd1bd2e64bbe30f3d794bd70e3419056ca1600c1f3d6370e154`                       |
-| Send to    | `auth0_007c69121dc70023edf579da8f10::1220f792fc36ceb9f88536e862f0923f1b655cccb9a711ee4d5ede1397ad722bb155` |
-| Instrument | `EURCV`                                                                                            |
-| Amount     | `3000000`                                                                                                  |
-| Reference  | `EURCV EUR3m transfer from Virtu to DRW`                                                           |
-
-#### USD3m USDCV transfer from Virtu to DRW
-
-| Item       | Value                                                                                                      |
-| :--------- | :--------------------------------------------------------------------------------------------------------- |
-| Send from  | `virtu-holder::12203e15163301aebdd1bd2e64bbe30f3d794bd70e3419056ca1600c1f3d6370e154`                       |
-| Send to    | `auth0_007c69121dc70023edf579da8f10::1220f792fc36ceb9f88536e862f0923f1b655cccb9a711ee4d5ede1397ad722bb155` |
-| Instrument | `USDCV`                                                                                            |
-| Amount     | `3000000`                                                                                                  |
-| Reference  | `USDCV USD3m transfer from Virtu to DRW`                                                           |
-
-See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-Virtu) for details.
-
-### 4.2 DRW accepts transfer
-
-| Actors | Module   | Tab       |
-| :----- | :------- | :-------- |
-| DRW    | Registry | Transfers |
-
-DRW accepts transfer offer. (click on offer, and then on `Accept`)
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#Virtu-accepts-the-transfer-offer-and-tokens-are-transferred) for details.
