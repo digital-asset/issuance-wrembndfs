@@ -62,7 +62,7 @@
 | Broadridge           | `broadridge-provider::1220992258bad53ba6cb1aa634bb912d457f3e0382892ced2d00b4cac654e6e52259`                |
 | SG Forge (Registrar) | `sgforge::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                            |
 | SG Forge (Issuer)    | `sgforge-issuer::12206c7de045405eb47f7ecfb1fa82665672664e4b9ab350b7064ef7bceb8bc8cbe3`                     |
-| Virtu                | `virtu-holder::1220f36652a7487f93853ac8dcc7ed9e64c32c7caebf8c715e83c8581dba855a37ca`                       |
+| Virtu                | `??`                                                                                                       |
 | DRW                  | `auth0_007c681a1d5b8d3cd20b547c9169::12209d887b76480848434826589f69cb2ca46a670bc948fbc75bccfe933b78f2dd94` |
 
 ## Status
