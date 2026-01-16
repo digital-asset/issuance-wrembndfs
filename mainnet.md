@@ -62,7 +62,7 @@
 | Broadridge           | `broadridge-provider::1220fb5d230808f7caabd740d797daabfc31c7418180e2b1fd2365658f3220edf818`                |
 | SG Forge (Registrar) | `sgforge::12203e601bb3021da99f2105b460ef92f083faf716377991a636c52b11bda56c6cf1`                            |
 | SG Forge (Issuer)    | `sgforge-issuer::12203e601bb3021da99f2105b460ef92f083faf716377991a636c52b11bda56c6cf1`                     |
-| Virtu                | `virtu-holder::12203e15163301aebdd1bd2e64bbe30f3d794bd70e3419056ca1600c1f3d6370e154`                       |
+| Virtu                | `???`                                                                                                      |
 | DRW                  | `auth0_007c69121dc70023edf579da8f10::1220f792fc36ceb9f88536e862f0923f1b655cccb9a711ee4d5ede1397ad722bb155` |
 
 ## Status
@@ -71,8 +71,8 @@
 
 | Steps                                        | IEU  | BR   | SGF  | SGF-Issuer | Virtu | DRW  |
 | :------------------------------------------- | :--- | :--- | :--- | :--------- | :---- | :--- |
-| [0.1 Setup BR node](#01-setup-br-node)       | 📌    | 📌    | -    | -          | -     | -    |
-| [0.2 Setup SGF node](#02-setup-sgf-node)     | 📌    | -    | 📌    | 📌          | -     | -    |
+| [0.1 Setup BR node](#01-setup-br-node)       | ✅    | 📌    | -    | -          | -     | -    |
+| [0.2 Setup SGF node](#02-setup-sgf-node)     | ✅    | -    | 📌    | 📌          | -     | -    |
 | [0.3 Setup Virtu node](#03-setup-virtu-node) | -    | -    | -    | -          | 📌     | -    |
 | [0.4 Setup DRW node](#04-setup-drw-node)     | -    | -    | -    | -          | -     | 📌    |
 
@@ -275,7 +275,7 @@ Instrument Configuration ensures that:
 
 | Item                        | Value                                                                           |
 | :-------------------------- | :------------------------------------------------------------------------------ |
-| Instrument ID               | `EURCV`                                                                 |
+| Instrument ID               | `EURCV`                                                                         |
 | Identifiers                 |                                                                                 |
 | Source                      | `sgforge::12203e601bb3021da99f2105b460ef92f083faf716377991a636c52b11bda56c6cf1` |
 | Id                          | `XT9W5C49FJV7`                                                                  |
@@ -296,7 +296,7 @@ Instrument Configuration ensures that:
 
 | Item                        | Value                                                                           |
 | :-------------------------- | :------------------------------------------------------------------------------ |
-| Instrument ID               | `USDCV`                                                                 |
+| Instrument ID               | `USDCV`                                                                         |
 | Identifiers                 |                                                                                 |
 | Source                      | `sgforge::12203e601bb3021da99f2105b460ef92f083faf716377991a636c52b11bda56c6cf1` |
 | Id                          | `XTLD6JM2JN25`                                                                  |
@@ -415,19 +415,19 @@ See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuanc
 
 | Item       | Value                                                                           |
 | :--------- | :------------------------------------------------------------------------------ |
-| Instrument | `EURCV`                                                                 |
+| Instrument | `EURCV`                                                                         |
 | Amount     | `10000000`                                                                      |
 | Registrar  | `sgforge::12203e601bb3021da99f2105b460ef92f083faf716377991a636c52b11bda56c6cf1` |
-| Reference  | `EURCV EUR10m minted xxx-Jan-2026`                                      |
+| Reference  | `EURCV EUR10m minted xxx-Jan-2026`                                              |
 
 #### USD10m USDCV minted
 
 | Item       | Value                                                                           |
 | :--------- | :------------------------------------------------------------------------------ |
-| Instrument | `USDCV`                                                                 |
+| Instrument | `USDCV`                                                                         |
 | Amount     | `10000000`                                                                      |
 | Registrar  | `sgforge::12203e601bb3021da99f2105b460ef92f083faf716377991a636c52b11bda56c6cf1` |
-| Reference  | `USDCV USD10m minted xxx-Jan-2026`                                      |
+| Reference  | `USDCV USD10m minted xxx-Jan-2026`                                              |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-requests-token-issuance-minting) for details.
 
@@ -455,9 +455,9 @@ Issuer transfers tokens to Virtu. (3 dots menu on the right of the holding / `Tr
 | :--------- | :----------------------------------------------------------------------------------- |
 | Send from  | `sgforge::12203e601bb3021da99f2105b460ef92f083faf716377991a636c52b11bda56c6cf1`      |
 | Send to    | `virtu-holder::12203e15163301aebdd1bd2e64bbe30f3d794bd70e3419056ca1600c1f3d6370e154` |
-| Instrument | `EURCV`                                                                      |
+| Instrument | `EURCV`                                                                              |
 | Amount     | `10000000`                                                                           |
-| Reference  | `EURCV EUR10m minted to Virtu`                                               |
+| Reference  | `EURCV EUR10m minted to Virtu`                                                       |
 
 #### USD10m USDCV minted to Virtu
 
@@ -465,9 +465,9 @@ Issuer transfers tokens to Virtu. (3 dots menu on the right of the holding / `Tr
 | :--------- | :----------------------------------------------------------------------------------- |
 | Send from  | `sgforge::12203e601bb3021da99f2105b460ef92f083faf716377991a636c52b11bda56c6cf1`      |
 | Send to    | `virtu-holder::12203e15163301aebdd1bd2e64bbe30f3d794bd70e3419056ca1600c1f3d6370e154` |
-| Instrument | `USDCV`                                                                      |
+| Instrument | `USDCV`                                                                              |
 | Amount     | `10000000`                                                                           |
-| Reference  | `USDCV USD10m minted to Virtu`                                               |
+| Reference  | `USDCV USD10m minted to Virtu`                                                       |
 
 See [tutorial](https://docs.digitalasset.com/utilities/testnet/tutorials/issuance/3-issuance.html#issuer-offers-token-transfer-to-Virtu) for details.
 
