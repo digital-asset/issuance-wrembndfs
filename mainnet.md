@@ -72,7 +72,7 @@
 | Steps                                        | IEU  | BR   | SGF  | SGF-Issuer | Virtu | DRW  |
 | :------------------------------------------- | :--- | :--- | :--- | :--------- | :---- | :--- |
 | [0.1 Setup BR node](#01-setup-br-node)       | ✅    | 📌    | -    | -          | -     | -    |
-| [0.2 Setup SGF node](#02-setup-sgf-node)     | ✅    | -    | 📌    | 📌          | -     | -    |
+| [0.2 Setup SGF node](#02-setup-sgf-node)     | ✅    | -    | ✅    | ✅          | -     | -    |
 | [0.3 Setup Virtu node](#03-setup-virtu-node) | -    | -    | -    | -          | 📌     | -    |
 | [0.4 Setup DRW node](#04-setup-drw-node)     | -    | -    | -    | -          | -     | 📌    |
 
@@ -80,7 +80,7 @@
 
 | Steps                                                                                        | DA   | BR   | SGF  | SGF-Issuer | Virtu | DRW  |
 | :------------------------------------------------------------------------------------------- | :--- | :--- | :--- | :--------- | :---- | :--- |
-| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | 📌    | 📌    | 📌          | 📌     | ✅    |
+| [1.1 Credential User Service for all entities](#11-credential-user-service-for-all-entities) | -    | 📌    | ✅    | ✅          | 📌     | ✅    |
 | [1.2 Provider credential](#12-provider-credential)                                           | ✅    | 📌    | -    | -          | -     | -    |
 | [1.3 Provider onboarding](#13-provider-onboarding)                                           | ✅    | 📌    | -    | -          | -     | -    |
 | [1.4 Provider configuration](#14-provider-configuration)                                     | -    | 📌    | -    | -          | -     | -    |
